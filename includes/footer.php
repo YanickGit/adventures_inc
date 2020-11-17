@@ -6,7 +6,7 @@
                 $year = date("y");
                 echo'
                 <br><hr/>
-                <p class = "text-center">Copyright &copy; 2019-'.$year.' | Yanick Levy | 1500174645 | Assignment 3 - Module 3 | Current Date & Time: '.$jm_date_time.'</p>
+                <p class = "text-center">Copyright &copy; 2019-'.$year.' | Yanick Levy | 1500174645 | Module #3 - Assignment #1 | Current Date & Time: '.$jm_date_time.'</p>
             ;'?>
         </div>
     </div>
