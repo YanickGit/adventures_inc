@@ -5,7 +5,7 @@
 }
 
 #slider{
-	width:845px;
+	width: 960px;
 	height:453px;
 	position:relative;
 }
@@ -14,7 +14,7 @@
 	height:72px;
 	width:68px;
 	position:absolute;
-	background:url('../images/slider/left.png') no-repeat;
+	background:url('../images/slider/__left.png') no-repeat;
 	top:50%;
 	margin-top:-36px;
 	cursor:pointer;
@@ -29,7 +29,7 @@
 	height:72px;
 	width:68px;
 	position:absolute;
-	background:url('../images/slider/rigjht.png') no-repeat;
+	background:url('../images/slider/__right.png') no-repeat;
 	top:50%;
 	margin-top:-36px;
 	cursor:pointer;
@@ -41,7 +41,7 @@
 #slider .nextButton:hover{background-position:right bottom;right:0;}
 
 #slider ul{
-	width:845px;
+	width: 960px;
 	height:453px;
 	list-style:none outside none;
 	position:relative;

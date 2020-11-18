@@ -4,9 +4,7 @@
     require_once 'db/db_connect.php';
 ?>
 <br>
-<h2>Adventures Inc: <?php echo $title;?></h2>
-<p>Resize the browser window to see the effect.</p>
-<br>
+<h2><?php echo $title;?></h2>
 
 <div class="row">
   <div class="column">
@@ -17,7 +15,7 @@
         <p class="title">CEO & Founder</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -30,7 +28,7 @@
         <p class="title">Art Director</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -43,7 +41,7 @@
         <p class="title">Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -58,7 +56,7 @@
         <p class="title">CEO & Founder</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -71,7 +69,7 @@
         <p class="title">Art Director</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a>></p>
       </div>
     </div>
   </div>
@@ -84,7 +82,7 @@
         <p class="title">Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>

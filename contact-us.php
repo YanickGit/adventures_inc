@@ -6,7 +6,7 @@
 ?>
 
 <br/>
-<h2>Adventures Inc: <?php echo $title;?></h2>
+<h2><?php echo $title;?></h2>
 <p>Have a question or suggestions?</br></p>
 
 <h3>Adventures Inc</h3>
@@ -33,7 +33,7 @@ Email Address</br></p>
                     <input type="email" class="form-control" id="form-email" placeholder="Email Address">
                 </div>
                 <div class="form-group">
-                    <label for="form-subject">Telephone</label>
+                    <label for="form-subject">Subject</label>
                     <input type="text" class="form-control" id="form-subject" placeholder="Subject">
                 </div>
                 <div class="form-group">

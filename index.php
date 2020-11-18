@@ -5,12 +5,10 @@
 ?>
 
 <br>
-<h1>Adventures Inc: <?php echo $title;?></h1>
+<h2><?php echo $title;?></h2>
 <p>Join The Adventure</p>
-<br>
 
 <?php
-    $title = 'Home';
     require_once 'includes/slider.php';
 ?>
 

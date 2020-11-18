@@ -9,9 +9,7 @@
     ?>
     
     <br>
-    <h2>Adventures Inc: <?php echo $title;?></h2>
-    <p>Resize the browser window to see the effect.</p>
-    <br>
+    <h2><?php echo $title;?></h2>
     
     <form method="post" action="success.php" enctype="multipart/form-data" autocomplete="off">
         <div class="form-group">
