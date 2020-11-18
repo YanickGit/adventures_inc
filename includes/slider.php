@@ -1,24 +1,10 @@
-<div id="main" role="main">
-      <section class="slider">
-        <div class="flexslider">
-          <ul class="slides">
-            <li>
-  	    	    <img src="images/slider/kitchen_adventurer_cheesecake_brownie.jpg" />
-              <p class="flex-caption">Image #1</p>
-  	    		</li>
-  	    		<li>
-  	    	    <img src="images/slider/kitchen_adventurer_lemon.jpg" />
-              <p class="flex-caption">Image #2</p>
-  	    		</li>
-  	    		<li>
-  	    	    <img src="images/slider/kitchen_adventurer_donut.jpg" />
-              <p class="flex-caption">Image #3</p>
-  	    		</li>
-  	    		<li>
-  	    	    <img src="images/slider/kitchen_adventurer_caramel.jpg" />
-              <p class="flex-caption">Image #4</p>
-  	    		</li>
-          </ul>
-        </div>
-      </section>
-    </div>
+<div id="slider">
+	<ul>
+      	<li><img src="images/slider/slide1.jpg" width="845" height="453" /></li>
+            <li><img src="images/slider/slide2.jpg" width="845" height="453"/><p>ddddddd</p></li>
+            <li><img src="images/slider/slide3.jpg" width="845" height="453" /></li>
+            <li><img src="images/slider/slide4.jpg" width="845" height="453" /></li>
+      </ul>
+      <span class="button prevButton"></span>
+      <span class="button nextButton"></span>
+</div>

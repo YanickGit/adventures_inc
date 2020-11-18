@@ -76,42 +76,13 @@ html {
 }
 </style>
 
-
-
-
-    <!-- Slider Syntax Highlighter -->
-  <!--<link href="css/slider/shCore.css" rel="stylesheet" type="text/css" />
-  <link href="css/slider/shThemeDefault.css" rel="stylesheet" type="text/css" /> -->
-  <!-- Slider Demo CSS -->
-	<!-- <link rel="stylesheet" href="css/slider/demo.css" type="text/css" media="screen" /> -->
-	<link rel="stylesheet" href="css/slider/flexslider.css" type="text/css" media="screen" />
-
-	<!-- Slider Modernizr -->
-  <script src="scripts/slider/modernizr.js"></script>
-
-  <style type="text/css">
-    .flex-caption {
-      width: 96%;
-      padding: 2%;
-      left: 0;
-      bottom: 0;
-      background: rgba(0,0,0,.5);
-      color: #fff;
-      text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-      font-size: 14px;
-      line-height: 18px;
-    }
-    li.css a {
-      border-radius: 0;
-    }
-  </style>
-
-
     
      <title>Adventures Inc - <?php echo $title ?></title>
   </head>
   <body>
     <div class="container">
+
+    
 
   <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

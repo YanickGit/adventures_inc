@@ -1,16 +1,64 @@
 /*Picture Slider*/
-
-.flex-caption {
-  width: 96%;
-  padding: 2%;
-  left: 0;
-  bottom: 0;
-  background: rgba(0,0,0,.5);
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-  font-size: 14px;
-  line-height: 18px;
+*{
+	margin:0;
+	padding:0;
 }
+
+#slider{
+	width:845px;
+	height:453px;
+	position:relative;
+}
+
+#slider .prevButton{
+	height:72px;
+	width:68px;
+	position:absolute;
+	background:url('../images/slider/left.png') no-repeat;
+	top:50%;
+	margin-top:-36px;
+	cursor:pointer;
+	z-index:2000;
+	background-position:left top;
+	left:0
+}
+
+#slider .prevButton:hover{ background-position:left bottom;left:0;}
+
+#slider .nextButton{
+	height:72px;
+	width:68px;
+	position:absolute;
+	background:url('../images/slider/rigjht.png') no-repeat;
+	top:50%;
+	margin-top:-36px;
+	cursor:pointer;
+	z-index:2000;
+	background-position:right top;
+	right:0
+}
+
+#slider .nextButton:hover{background-position:right bottom;right:0;}
+
+#slider ul{
+	width:845px;
+	height:453px;
+	list-style:none outside none;
+	position:relative;
+	overflow:hidden;
+}
+
+#slider li:first-child{
+	display:list-item;
+	position:absolute;
+}
+
+#slider li{
+	position:absolute;
+	display:none;
+}
+
+
 
  
 /*The Team*/
@@ -40,11 +88,11 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.container {
+.slider {
   padding: 0 16px;
 }
 
-.container::after, .row::after {
+.slider::after, .row::after {
   content: "";
   clear: both;
   display: table;
