@@ -1,6 +1,6 @@
 
     <?php
-        $title = 'Index';
+        $title = 'Join The Adventure';
         require_once 'includes/header.php';
         require_once 'db/db_connect.php';
 
@@ -8,7 +8,10 @@
         $results = $crud->getSpecialization();
     ?>
     
-    <h1 class = "text-center">IT Conference Registration</h1>
+    <br>
+    <h2>Adventures Inc: <?php echo $title;?></h2>
+    <p>Resize the browser window to see the effect.</p>
+    <br>
     
     <form method="post" action="success.php" enctype="multipart/form-data" autocomplete="off">
         <div class="form-group">

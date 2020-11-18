@@ -1,11 +1,14 @@
 <?php
     $title = 'Home';
     require_once 'includes/header.php';
-    //require_once 'includes/slider.php';
-    //require_once 'db/db_connect.php';
+    require_once 'includes/slider.php';
+    require_once 'db/db_connect.php';
 ?>
 
-<h1 class = "text-center">Home Page</h1>
+<br>
+<h1>Adventures Inc: <?php echo $title;?></h1>
+<p>Resize the browser window to see the effect.</p>
+<br>
 
 <?php
     require_once 'includes/footer.php';

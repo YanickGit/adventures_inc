@@ -9,11 +9,75 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     
     <link rel="stylesheet" type="text/css" href="css/site.css">
+
+    <!-- meet The Team-->
+    <style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+
+
+
 
     <!-- Slider Syntax Highlighter -->
   <!--<link href="css/slider/shCore.css" rel="stylesheet" type="text/css" />
@@ -41,6 +105,8 @@
       border-radius: 0;
     }
   </style>
+
+
     
      <title>Adventures Inc - <?php echo $title ?></title>
   </head>
@@ -56,11 +122,11 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav mr-auto">
           <a class="nav-link active" href="index.php">Home<span class="sr-only">(current)</span></a>
-          <a class="nav-link" href="#">Adventures</a>
-          <a class="nav-link" href="#">The Explorers</a>
-          <a class="nav-link" href="#">Register</a>
-          <a class="nav-link" href="#">About Us</a>
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="the-adventures.php">The Adventures</a>
+          <a class="nav-link" href="sign-up.php">Join The Adventure</a>
+          <a class="nav-link" href="the-team.php">The Team</a>
+          <a class="nav-link" href="about-us.php">About Us</a>
+          <a class="nav-link" href="contact-us.php">Contact Us</a>
         </div>
         <div class="navbar-nav ml-auto">
             <?php 
