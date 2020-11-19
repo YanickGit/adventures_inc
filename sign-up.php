@@ -16,15 +16,19 @@ form{float: left;width: 100%;}
 img, embed{margin-top: 20px;}
 </style>
      
-    <form method="post" action="success.php" enctype="multipart/form-data" id="sign-up-form" autocomplete="off">
+    <form method="post" action="success.php" enctype="multipart/form-data" autocomplete="off">
     
     <div class="row">
-      <div class="col">
-      <img id="previewImg" src="images/team/__blank.jpg" alt="Placeholder" width="300" height="300">
-		<small id="help" class="form-text text-muted">Preview your picture.</small>
+    <div class="col">
+    <img id="signup-img" src="images/team/__blank.jpg" alt="Placeholder">
+    <small id="help" class="form-text text-muted">Preview</small>
       </div>
-      <div class="col">
-		<input type="file" class="form-control" id="image" accept="image/*" onchange="previewFile(this);" placeholder="Upload Your Picture " name="image" >
+    </div>
+  <br>
+  
+  <div class="row">
+    <div class="col">
+    <input type="file" class="form-control-file" id="image" accept="image/*" onchange="previewImage(this);" placeholder="Upload Your Picture " name="image" >
 		<small id="help" class="form-text text-muted">Upload your picture.</small>
       </div>
     </div>
@@ -80,7 +84,7 @@ img, embed{margin-top: 20px;}
         <button type="reset" name="reset" class="btn btn-warning btn-block">Reset</button>
       </div>
     </div>
-	
+	<br><br>
   </form>
    
     <?php

@@ -33,7 +33,7 @@
   
   <div class="column">
     <div class="card">
-      <img id ="team-img"src="images/team/__blank.jpg" alt="paul-tong">
+      <img id ="team-img"src="images/team/paul-tong.jpg" alt="paul-tong">
       <div class="theTeam">
         <h2>Paul Tong</h2>
         <p class="title">Finance Manager</p>
@@ -89,7 +89,7 @@
   
   <div class="column">
     <div class="card">
-      <img id ="team-img"src="images/team/__blank.jpg" alt="mena-bourne">
+      <img id ="team-img"src="images/team/mena-bourne.jpg" alt="mena-bourne">
       <div class="theTeam">
         <h2>Mena Bourne</h2>
         <p class="title">Team Lead: Sailing</p>

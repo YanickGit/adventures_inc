@@ -1,4 +1,4 @@
-    <br>
+    <br><br>
         <div id="footer">
             <?php
                 date_default_timezone_set("America/Bogota");
@@ -151,14 +151,14 @@ $("#image").change(function () {
 </script> -->
 
 <script>
-    function previewFile(input){
+    function previewImage(input){
         var file = $("input[type=file]").get(0).files[0];
  
         if(file){
             var reader = new FileReader();
  
             reader.onload = function(){
-                $("#previewImg").attr("src", reader.result);
+                $("#signup-img").attr("src", reader.result);
             }
  
             reader.readAsDataURL(file);

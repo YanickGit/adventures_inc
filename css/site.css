@@ -5,7 +5,8 @@
 }
 
 #slider{
-	width: 960px;
+	width: 100%;
+	max-width: 960px;
 	height: 480px;
 	margin-left: auto;
 	margin-right: auto;
@@ -16,7 +17,7 @@
 	height:72px;
 	width:68px;
 	position:absolute;
-	background:url('../images/slider/__left.png') no-repeat;
+	background:url('#') no-repeat;
 	top:50%;
 	margin-top:-36px;
 	cursor:pointer;
@@ -31,7 +32,7 @@
 	height:72px;
 	width:68px;
 	position:absolute;
-	background:url('../images/slider/__right.png') no-repeat;
+	background:url('#') no-repeat;
 	top:50%;
 	margin-top:-36px;
 	cursor:pointer;
@@ -43,26 +44,30 @@
 #slider .nextButton:hover{background-position:right bottom;right:0;}
 
 #slider ul{
-	width: 950px;
-	height:470px;
+	width: 100%;
+	max-width: 950px;
+	height: auto;
+	max-height: 470px;
 	list-style:none outside none;
-	position:relative;
+	
 	overflow:hidden;
 }
 
 #slider li:first-child{
 	display:list-item;
-	position:absolute;
+	
 }
 
 #slider li{
-	position:absolute;
+	
 	display:none;
 }
 
 #slider-img {
-	width: 960px;
-	height: 480px;
+	width: 100%;
+	max-width: 950px;
+	height: auto;
+	max-height: 470px;
   }
 
 /*==========================================*/ 
@@ -83,10 +88,10 @@ html {
 	padding: 0 8px;
   }
   
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 960px) {
 	.column {
 	  width: 100%;
-	  display: block;
+
 	}
   }
   
@@ -146,5 +151,21 @@ html {
 	max-width: 250px;
 	height: auto;
 	max-height: 188px;
+	
+  }
+
+  /*==========================================*/ 
+
+/*Sign Up*/
+
+#signup-img {
+	border:2px solid #021a40;
+	float: center;
+	border-radius: 15%;
+	padding: 2px;
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	max-height: 300px;
 	
   }
