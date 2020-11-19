@@ -33,10 +33,23 @@
   
   <div class="column">
     <div class="card">
+      <img id ="team-img"src="images/team/yan-levy.jpg" alt="paul-tong">
+      <div class="theTeam">
+        <h2>Paul Tong</h2>
+        <p class="title">Finance Manager</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>paul-tong@adventures.inc</p>
+        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
       <img id ="team-img"src="images/team/kim-blank.jpg" alt="kim-blank">
       <div class="theTeam">
         <h2>Kim Blank</h2>
-        <p class="title">Adventures & Administrative Manager</p>
+        <p class="title">Adventures & Admin Manager</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>kim-blank@adventures.inc</p>
         <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
@@ -51,7 +64,7 @@
       <img id ="team-img" src="images/team/carrie-pryce.jpg" alt="carrie-pryce">
       <div class="theTeam">
         <h3>Carrie Pryce</h3>
-        <p class="title">Team Lead: Sailing & Surfing</p>
+        <p class="title">Team Lead: Surfing</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>carrie-pryce@adventures.inc</p>
         <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
@@ -74,6 +87,19 @@
     </div>
   </div>
   
+  <div class="column">
+    <div class="card">
+      <img id ="team-img"src="images/team/yan-levy.jpg" alt="mena-bourne">
+      <div class="theTeam">
+        <h2>Mena Bourne</h2>
+        <p class="title">Team Lead: Sailing</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mena-bourne@adventures.inc</p>
+        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
+      </div>
+    </div>
+  </div>
+
   <div class="column">
     <div class="card">
       <img id ="team-img"src="images/team/zeal-mount.jpg" alt="zeal-mount">
