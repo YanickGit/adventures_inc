@@ -8,9 +8,10 @@
 <p>Have a question or suggestions?</br></p>
 
 <p><b>The Adventure Building, 3rd Floor, 1077 Earth Boulvard</b>,</br>
+Kingston 20, </br>
+P.O. Box 674,</br>
 Jamaica, West Indies,</br>
-P.O. Box 674</br>
-876.999.1000-10</br>
+876.999.1000-10,</br>
 wecare@adventures.inc</br></p>
 
     <div class="row">
