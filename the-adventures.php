@@ -1,7 +1,6 @@
 <?php
     $title = 'The Adventures';
     require_once 'includes/header.php';
-    require_once 'db/db_connect.php';
 ?>
 
 <br>

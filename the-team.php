@@ -1,7 +1,6 @@
 <?php
     $title = 'The Team';
     require_once 'includes/header.php';
-    require_once 'db/db_connect.php';
 ?>
 <br>
 <h2><?php echo $title;?></h2>
