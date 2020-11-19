@@ -27,7 +27,7 @@
       </div>
       <div class="col">
         <input type="text" class="form-control" id="lastname" placeholder="Type Your Lastname" name="lastname" required>
-		<small id="help" class="form-text text-muted">Type your firstname.</small>
+		<small id="help" class="form-text text-muted">Type your lastname.</small>
       </div>
     </div>
     <br>
