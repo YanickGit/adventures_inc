@@ -7,7 +7,9 @@
 #slider{
 	width: 960px;
 	height:453px;
-	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	border: 5px solid rgb(140, 191, 250);
 }
 
 #slider .prevButton{
@@ -41,8 +43,8 @@
 #slider .nextButton:hover{background-position:right bottom;right:0;}
 
 #slider ul{
-	width: 960px;
-	height:453px;
+	width: 951px;
+	height:443px;
 	list-style:none outside none;
 	position:relative;
 	overflow:hidden;
@@ -115,4 +117,17 @@ html {
   
   .button:hover {
 	background-color: #555;
+  }
+
+/*==========================================*/ 
+
+/*The Adventure*/
+
+  #adventure-img {
+	float: left;
+	border: 5px;
+	border-radius: 15%;
+	padding: 5px;
+	height: 250px;
+	width: 250px;
   }
