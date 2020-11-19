@@ -6,7 +6,7 @@
 
 #slider{
 	width: 960px;
-	height:453px;
+	height: 480px;
 	margin-left: auto;
 	margin-right: auto;
 	border: 5px solid rgb(140, 191, 250);
@@ -43,8 +43,8 @@
 #slider .nextButton:hover{background-position:right bottom;right:0;}
 
 #slider ul{
-	width: 951px;
-	height:443px;
+	width: 950px;
+	height:470px;
 	list-style:none outside none;
 	position:relative;
 	overflow:hidden;
@@ -59,6 +59,11 @@
 	position:absolute;
 	display:none;
 }
+
+#slider-img {
+	width: 960px;
+	height: 480px;
+  }
 
 /*==========================================*/ 
 
@@ -119,6 +124,15 @@ html {
 	background-color: #555;
   }
 
+  #team-img {
+	
+	width: 100%;
+	max-width: 370px;
+	height: auto;
+	max-height: 370px;
+  	
+  }
+
 /*==========================================*/ 
 
 /*The Adventure*/
@@ -128,6 +142,9 @@ html {
 	border: 5px;
 	border-radius: 15%;
 	padding: 5px;
-	height: 250px;
-	width: 250px;
+	width: 100%;
+	max-width: 250px;
+	height: auto;
+	max-height: 188px;
+	
   }

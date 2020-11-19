@@ -8,7 +8,6 @@
 <br>
 <h2><?php echo $title;?></h2>
 <p>Resize the browser window to see the effect.</p>
-<br>
 
 <?php
     require_once 'includes/footer.php';

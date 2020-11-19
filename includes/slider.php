@@ -2,10 +2,10 @@
 <div id="slider">
     
 <ul>
-      	<li><img src="images/adventures/hiking.jpg" width="960" height="453" /></li>
-            <li><img src="images/adventures/surfing.jpg" width="960" height="453" /></li>
-            <li><img src="images/adventures/cycling.jpg" width="960" height="453" /></li>
-            <li><img src="images/adventures/sailing.jpg" width="960" height="453" /></li>
+      	<li><img id ="slider-img" src="images/adventures/hiking.jpg" /></li>
+            <li><img id ="slider-img"src="images/adventures/surfing.jpg" /></li>
+            <li><img id ="slider-img"src="images/adventures/cycling.jpg" /></li>
+            <li><img id ="slider-img"src="images/adventures/sailing.jpg" /></li>
       </ul>
       <span class="button prevButton"></span>
       <span class="button nextButton"></span>

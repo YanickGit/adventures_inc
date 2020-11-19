@@ -9,14 +9,12 @@
 <h2><?php echo $title;?></h2>
 <p>Have a question or suggestions?</br></p>
 
-<h3>Adventures Inc</h3>
+<p><b>The Adventure Building, 3rd Floor, 1077 Earth Boulvard</b>,</br>
+Jamaica, West Indies,</br>
+P.O. Box 674</br>
+876.999.1000-10</br>
+wecare@adventures.inc</br></p>
 
-<p><b>Join The Adventures</b></br>
-Street Address</br>
-Contact #</br>
-Email Address</br></p>
-
-   <br />
     <div class="row">
         <div class="col-md-6">
             <div id="googlemap" style="width:100%; height:350px;"></div>
@@ -25,20 +23,20 @@ Email Address</br></p>
         <div class="col-md-6">
             <form class="my-form">
                 <div class="form-group">
-                    <label for="form-name">Name</label>
-                    <input type="email" class="form-control" id="form-name" placeholder="Name">
+                    <input type="text" class="form-control" id="form-name" placeholder="Name">
+                    <small id="help" class="form-text text-muted">Type your full name.</small>
                 </div>
                 <div class="form-group">
-                    <label for="form-email">Email Address</label>
                     <input type="email" class="form-control" id="form-email" placeholder="Email Address">
+                    <small id="help" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
-                    <label for="form-subject">Subject</label>
                     <input type="text" class="form-control" id="form-subject" placeholder="Subject">
+                    <small id="help" class="form-text text-muted">Type the subject of your message.</small>
                 </div>
                 <div class="form-group">
-                    <label for="form-message">Email your Message</label>
                     <textarea class="form-control" id="form-message" placeholder="Message"></textarea>
+                    <small id="help" class="form-text text-muted">Type your message.</small>
                 </div>
                 <button class="btn btn-secondary" type="submit">Contact Us</button>                
             </form>

@@ -6,32 +6,32 @@
 
 <br>
 <h2><?php echo $title;?></h2>
-<br>
 
 <div class="card">
-  <h5 class="card-header">JAMAICA: Hiking to Blue Mountains</h5>
+  <h5 class="card-header">JAMAICA: Hike to Blue Mountains</h5>
   <div class="card-body">
     <img id ="adventure-img" src="images/adventures/hiking.jpg" alt="hiking">
     <h5 class="card-title">Hiking</h5>
-    <p class="card-text">The eastern side of the lush green island of Jamaica is dominated by the Blue and John Crow Mountains National Park. The park was designated a UNESCO world heritage site in 2015 due to its unique and diverse flora and fauna, much of it endemic to Jamaica. Magnificently undeveloped, this mountain paradise is best explored on foot. Hiking the Blue Mountains is one of the most rewarding experiences to be had in Jamaica.</p>
+    <p class="card-text">The eastern side of the lush green island of Jamaica is dominated by the Blue and John Crow Mountains National Park. The park was designated a UNESCO world heritage site in 2015 due to its unique and diverse flora and fauna, much of it endemic to Jamaica. Magnificently undeveloped, this mountain paradise is best explored on foot. Hiking the Blue Mountains is one of the most rewarding experiences to be had in Jamaica. <br><br>
+  </p>
     <a href="sign-up.php" class="btn btn-primary">Join The Adventure</a>
   </div>
 </div>
 <br>
 
 <div class="card">
-  <h5 class="card-header">JAMAICA: Surfing in Boston Bay</h5>
+  <h5 class="card-header">JAMAICA: Surf in Boston Bay</h5>
   <div class="card-body">
     <img id ="adventure-img" src="images/adventures/surfing.jpg" alt="surfing">
     <h5 class="card-title">Surfing</h5>
-    <p class="card-text">The most popular beach for surfing in Jamaica is picturesque Boston Bay in Port Antonio parish. There are surfable waves year-round in the bay and you can always find a handful of local surfers out in the water. The waves are gentle, making this a great spot for newbies. Several surf schools operate on the beach if you need some help getting up on the board.</p>
+    <p class="card-text">The most popular beach for surfing in Jamaica is picturesque Boston Bay in Port Antonio parish. There are surfable waves year-round in the bay and you can always find a handful of local surfers out in the water. The waves are gentle, making this a great spot for newbies. Several surf schools operate on the beach if you need some help getting up on the board.<br><br></p>
     <a href="sign-up.php" class="btn btn-primary">Join The Adventure</a>
   </div>
 </div>
 <br>
 
 <div class="card">
-  <h5 class="card-header">JAMAICA: Cycling to Portland</h5>
+  <h5 class="card-header">JAMAICA: Cycle to Portland</h5>
   <div class="card-body">
     <img id ="adventure-img" src="images/adventures/cycling.jpg" alt="cycling">
     <h5 class="card-title">Cycling</h5>
@@ -42,7 +42,7 @@
 <br>
 
 <div class="card">
-  <h5 class="card-header">JAMAICA: Sailing to Montego Bay</h5>
+  <h5 class="card-header">JAMAICA: Sail to Montego Bay</h5>
   <div class="card-body">
     <img id ="adventure-img" src="images/adventures/sailing.jpg" alt="sailing">
     <h5 class="card-title">Sailing</h5>
