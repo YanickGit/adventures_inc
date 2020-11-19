@@ -7,7 +7,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img id ="team-img" src="images/team/yan-levy.jpg" alt="yan-levy">
+      <img id ="team-img" src="images/team/__blank.jpg" alt="yan-levy">
       <div class="theTeam">
         <h3>Yan Levy</h3>
         <p class="title">CEO & Founder</p>
@@ -33,7 +33,7 @@
   
   <div class="column">
     <div class="card">
-      <img id ="team-img"src="images/team/yan-levy.jpg" alt="paul-tong">
+      <img id ="team-img"src="images/team/__blank.jpg" alt="paul-tong">
       <div class="theTeam">
         <h2>Paul Tong</h2>
         <p class="title">Finance Manager</p>
@@ -89,7 +89,7 @@
   
   <div class="column">
     <div class="card">
-      <img id ="team-img"src="images/team/yan-levy.jpg" alt="mena-bourne">
+      <img id ="team-img"src="images/team/__blank.jpg" alt="mena-bourne">
       <div class="theTeam">
         <h2>Mena Bourne</h2>
         <p class="title">Team Lead: Sailing</p>
