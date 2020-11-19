@@ -36,7 +36,7 @@
       <img id ="team-img"src="images/team/kim-blank.jpg" alt="kim-blank">
       <div class="theTeam">
         <h2>Kim Blank</h2>
-        <p class="title">Adventures Manager</p>
+        <p class="title">Adventures & Administrative Manager</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>kim-blank@adventures.inc</p>
         <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
