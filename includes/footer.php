@@ -128,6 +128,46 @@ $(window).load(function(){
 </script>
 
 <!--===========================================================-->
+
+    <!-- Preview Image 
+	<script>
+	function filePreview(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#previewImg + img').remove();
+            $('#sign-up-form').after('<img src="'+e.target.result+'" width="450" height="300"/>');
+            //$('#sign-up-form + embed').remove();
+            //$('#sign-up-form').after('<embed src="'+e.target.result+'" width="450" height="300">');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#image").change(function () {
+    filePreview(this);
+});
+
+</script> -->
+
+<script>
+    function previewFile(input){
+        var file = $("input[type=file]").get(0).files[0];
+ 
+        if(file){
+            var reader = new FileReader();
+ 
+            reader.onload = function(){
+                $("#previewImg").attr("src", reader.result);
+            }
+ 
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+<!--===========================================================-->
+
     <!-- jQuery UI DatePicker -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

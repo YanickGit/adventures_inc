@@ -10,11 +10,21 @@
     
     <br>
     <h2><?php echo $title;?></h2>
+
+    <style type="text/css">
+form{float: left;width: 100%;}
+img, embed{margin-top: 20px;}
+</style>
+     
+    <form method="post" action="success.php" enctype="multipart/form-data" id="sign-up-form" autocomplete="off">
     
-    <form method="post" action="success.php" enctype="multipart/form-data" autocomplete="off">
     <div class="row">
       <div class="col">
-		<input type="file" class="form-control" id="image" accept="image/*" placeholder="Upload Your Picture "name="image" >
+      <img id="previewImg" src="images/team/__blank.jpg" alt="Placeholder" width="300" height="300">
+		<small id="help" class="form-text text-muted">Preview your picture.</small>
+      </div>
+      <div class="col">
+		<input type="file" class="form-control" id="image" accept="image/*" onchange="previewFile(this);" placeholder="Upload Your Picture " name="image" >
 		<small id="help" class="form-text text-muted">Upload your picture.</small>
       </div>
     </div>
