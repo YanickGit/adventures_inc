@@ -70,12 +70,12 @@
             }
         }
 
-        public function getAttendees (){
+        public function getAllClients (){
             try {
-                $sql = "SELECT * FROM `attendee_tbl` 
-                inner join specialization_tbl on specialization_fk = specialization_id 
-                inner join status_tbl on status_fk = status_id
-                where status_tbl.status_num = $this->active";
+                $sql = "SELECT * FROM `clients_tbl` 
+                inner join adventures_tbl on adventures_fk = adventures_id 
+                inner join clients_status_tbl on client_status_fk = status_id
+                where clients_status_tbl.status_num = $this->active";
 
                 $results =$this->db->query($sql);
                 return $results;
