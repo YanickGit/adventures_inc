@@ -4,8 +4,8 @@
         require_once 'includes/header.php';
         require_once 'db/db_connect.php';
 
-        //get all specialization
-        $results = $crud->getSpecialization();
+        //get all adventures
+        $results = $client_crud->getAdventures();
     ?>
     
     <br>
@@ -16,7 +16,7 @@ form{float: left;width: 100%;}
 img, embed{margin-top: 20px;}
 </style>
      
-    <form method="post" action="success.php" enctype="multipart/form-data" autocomplete="off">
+    <form method="post" action="card-success.php" enctype="multipart/form-data" autocomplete="off">
     
     <div class="row">
     <div class="col">
@@ -48,14 +48,14 @@ img, embed{margin-top: 20px;}
 	
 	<div class="row">
       <div class="col">
-		<select class="form-control" id="adventure" name="adventure" required>
+		<select class="form-control" id="adventures" name="adventures" required>
                    
                     <?php while($row = $results->fetch(PDO::FETCH_ASSOC)) { ?>
-                        <option value="<?php echo $row['adventure_id'] ?>"><?php echo $row['name'] ?></option>
+                        <option value="<?php echo $row['adventures_id'] ?>"><?php echo $row['adventures_name'] ?></option>
                     <?php } ?>
                 
                 </select>
-            <small id="adventureHelp" class="form-text text-muted">Select your adventure.</small>
+            <small id="help" class="form-text text-muted">Select your adventure.</small>
       </div>
       <div class="col">
 		<input type="text" class="form-control" id="dob" name="dob" placeholder="Select Your Date of Birth" required readonly>

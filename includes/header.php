@@ -54,10 +54,10 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav mr-auto">
           <a class="<?php if ($title == 'Home'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="index.php">Home<span class="sr-only">(current)</span></a>
+          <a class="<?php if ($title == 'About Us'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="about-us.php">About Us</a>
           <a class="<?php if ($title == 'The Adventures'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="the-adventures.php">The Adventures</a>
           <a class="<?php if ($title == 'Join The Adventure'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="sign-up.php">Join The Adventure</a>
           <a class="<?php if ($title == 'The Team'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="the-team.php">The Team</a>
-          <a class="<?php if ($title == 'About Us'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="about-us.php">About Us</a>
           <a class="<?php if ($title == 'Contact Us'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="contact-us.php">Contact Us</a>
         </div>
         <div class="navbar-nav ml-auto">

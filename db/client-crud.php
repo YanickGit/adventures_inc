@@ -1,5 +1,5 @@
 <?php 
-    class crud {
+    class client_crud {
         //private database object
         private $db;
 
@@ -14,12 +14,12 @@
             $this->db = $db_connect;
         }
 
-        //function to insert a new record in the attendee_tbl in the attendance_db
-        public function insertAttendees ($firstname, $lastname, $imgpath, $dob, $specialization, $email, $contact_num){
+        //function to insert a new record
+        public function insertClients ($firstname, $lastname, $imgpath, $dob, $adventures, $email, $contact_num){
             try {
                 //define sql statement to be executed 
-                $sql = "INSERT INTO `attendee_tbl`(`firstname`, `lastname`, `imgpath`, `dob`, `specialization_fk`, `email`, `contact_num`) 
-                VALUES (:firstname, :lastname, :imgpath, :dob, :specialization, :email, :contact_num)";
+                $sql = "INSERT INTO `clients_tbl`(`firstname`, `lastname`, `imgpath`, `dob`, `adventures_fk`, `email`, `contact_num`) 
+                VALUES (:firstname, :lastname, :imgpath, :dob, :adventures, :email, :contact_num)";
                 
                 //prepare the sql statement for execution
                 $statement = $this->db->prepare($sql);
@@ -29,7 +29,7 @@
                 $statement->bindparam(':lastname',$lastname);
                 $statement->bindparam(':imgpath',$imgpath);
                 $statement->bindparam(':dob',$dob);
-                $statement->bindparam(':specialization',$specialization);
+                $statement->bindparam(':adventures',$adventures);
                 $statement->bindparam(':email',$email);
                 $statement->bindparam(':contact_num',$contact_num);
 
@@ -174,9 +174,9 @@
             }
         }
 
-        public function getSpecialization (){
+        public function getAdventures (){
             try {
-                $sql = "SELECT * FROM `specialization_tbl`";
+                $sql = "SELECT * FROM `adventures_tbl`";
                 $results =$this->db->query($sql);
                 return $results;
             } catch(PDOException $e) {
