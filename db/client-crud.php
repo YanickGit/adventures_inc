@@ -43,7 +43,7 @@
             }
         }
 
-        public function editAttendee($id, $firstname, $lastname, $dob, $specialization, $email, $contact_num, $status1){
+        public function editAttendee($client_id, $firstname, $lastname, $dob, $specialization, $email, $contact_num, $status1){
             try {
                 $sql = "UPDATE `attendee_tbl` 
                 SET `firstname`=:firstname,`lastname`=:lastname, `specialization_fk`=:specialization,`dob`=:dob,`email`=:email,`contact_num`=:contact_num, `status_fk`=:status1 
@@ -52,7 +52,7 @@
              //bind all placeholders to the actual values
                 
                 $statement = $this->db->prepare($sql);
-                $statement->bindparam(':id',$id);              
+                $statement->bindparam(':client_id',$client_id);              
                 $statement->bindparam(':firstname',$firstname);
                 $statement->bindparam(':lastname',$lastname);
                 $statement->bindparam(':dob',$dob);
@@ -101,15 +101,15 @@
             }
         }
 
-        public function getAttendeeDetails ($id){
+        public function getClientDetails ($client_id){
             try {
-                $sql = "SELECT * FROM `attendee_tbl` 
-                inner join specialization_tbl on specialization_fk = specialization_id 
-                inner join status_tbl on status_fk = status_id
-                where attendee_id = :id";
+                $sql = "SELECT * FROM `clients_tbl` 
+                inner join adventures_tbl on adventures_fk = adventures_id 
+                inner join clients_status_tbl on client_status_fk = status_id
+                where client_id = :client_id";
 
                 $statement = $this->db->prepare($sql);
-                $statement->bindparam(':id', $id);        
+                $statement->bindparam(':client_id', $client_id);        
                 $statement->execute();
                 $result = $statement->fetch();
                 return $result;

@@ -11,7 +11,7 @@
 <h1 class = "text-center">Registered Adventurers</h1>
 <br>
 
-<table class="table table-striped">
+<table class="table table-striped" id="dtBasicExample">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -27,18 +27,17 @@
     
     <tr>
       <th scope="row"><?php echo $row['client_id'] ?></th>
-      <td><?php echo $row['firstname'] ?></td>
-      <td><?php echo $row['lastname'] ?></td>
+      <td><?php echo ucfirst($row['firstname']) ?></td>
+      <td><?php echo ucfirst($row['lastname']) ?></td>
       <td><?php echo $row['adventures_name'] ?></td>
       <td><?php echo $row['status1'] ?></td>
       <td>
-        <a href ="email-resend-registration.php?id=<?php echo $row['client_id'] ?>" class ="btn btn-info">Email</a>
-        <a href ="view-a-client.php?id=<?php echo $row['client_id'] ?>" class ="btn btn-primary">View</a>
-        <a href ="edit-a-client.php?id=<?php echo $row['client_id'] ?>" class ="btn btn-warning">Edit</a>
-        <a href ="view-delete-a-client.php?id=<?php echo $row['client_id'] ?>" class ="btn btn-danger">Delete</a>
+        <a href ="email-resend-registration.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-info">Email</a>
+        <a href ="view-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-primary">View</a>
+        <a href ="edit-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-warning">Edit</a>
+        <a href ="view-delete-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-danger">Delete</a>
       </td>
     </tr>
-    
     <?php } ?>
   </tbody> 
 </table>

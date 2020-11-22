@@ -29,7 +29,7 @@ img, embed{margin-top: 20px;}
   <div class="row">
     <div class="col">
     <input type="file" class="form-control-file" id="image" accept="image/*" onchange="previewImage(this);" placeholder="Upload Your Picture " name="image" >
-		<small id="help" class="form-text text-muted">Upload your picture.</small>
+		<small id="help" class="form-text text-muted">Upload your picture, maximum size 2MB.</small>
       </div>
     </div>
 	<br>

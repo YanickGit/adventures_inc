@@ -45,6 +45,13 @@
 
 <!--===========================================================-->
 
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--===========================================================-->
+
   <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
       <a class="navbar-brand" href="index.php">Adventures Inc</a>
@@ -69,7 +76,15 @@
               <a class="nav-link active" href=#>Hello <?php echo ucfirst($_SESSION['username']); ?>! <span class="sr-only"></span></a>
               <a class="nav-link active" href="view-all-clients.php">Manage Clients<span class="sr-only">(current)</span></a>
               <a class="nav-link" href="logout.php">Log out<span class="sr-only">(current)</span></a>
-            <?php } ?>      
+            <?php } ?>    
+            
+            <script>
+$(document).ready(function () {
+  $('#dtBasicExample').DataTable();
+  $('.dataTables_length').addClass('bs-select');
+});
+</script>
+
         </div>
       </div>
     </nav>
