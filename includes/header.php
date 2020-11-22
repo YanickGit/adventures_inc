@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!--===========================================================-->
+<!--============================================================================================================-->
 
     <!-- Website Icon -->
 <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
@@ -30,7 +30,7 @@
 <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-<!--===========================================================-->
+<!--============================================================================================================-->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -43,14 +43,7 @@
   <body>
     <div class="container">
 
-<!--===========================================================-->
-
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!--===========================================================-->
+<!--============================================================================================================-->
 
   <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">

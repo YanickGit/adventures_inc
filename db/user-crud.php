@@ -1,6 +1,6 @@
 <?php
 
-    class user{
+    class user_crud{
         //private database object
         private $db;
 
@@ -40,9 +40,9 @@
             }
         }
 
-    public function getUser($username, $password){
+    public function getAdmin($username, $password){
         try {
-            $sql = "SELECT * FROM `users_tbl` 
+            $sql = "SELECT * FROM `admin_tbl` 
             WHERE `username` = :username AND `password` = :password";
 
             $statement = $this->db->prepare($sql);

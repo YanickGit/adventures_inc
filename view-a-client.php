@@ -23,19 +23,19 @@
         
         <p>
         Status <br>
-        '.$result['status1'].' <br>
+        '.$result['status_name'].' <br>
         Date Registered <br>
-        '.$result['registration_time'].' <br>
+        '.$result['registered_on'].' <br>
         </p>
         ';
 
-        if(empty($result['update_time'])){
+        if(empty($result['updated_on'])){
   
         }else {
             echo'
             <p>
             Date Updated <br>
-            '.$result['update_time'].' <br>
+            '.$result['updated_on'].' <br>
             </p>
             ';
         }

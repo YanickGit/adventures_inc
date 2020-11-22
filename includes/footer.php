@@ -11,7 +11,7 @@
         </div>
 	</div>
 	
-<!--===========================================================-->
+<!--============================================================================================================-->
 
 <!-- Optional JavaScript; choose one of the two! -->
 
@@ -19,7 +19,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 	
-<!--===========================================================-->	
+<!--============================================================================================================-->
 
     <!--Contact Form Maps-->
   <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -37,7 +37,7 @@
       });
   </script>
 
-<!--===========================================================-->  
+<!--============================================================================================================-->
 
    <!--Picture Slider-->
    <script src="scripts/jquery-1.4.2.min.js"></script>
@@ -127,28 +127,9 @@ $(window).load(function(){
 
 </script>
 
-<!--===========================================================-->
+<!--============================================================================================================-->
 
-    <!-- Preview Image 
-	<script>
-	function filePreview(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $('#previewImg + img').remove();
-            $('#sign-up-form').after('<img src="'+e.target.result+'" width="450" height="300"/>');
-            //$('#sign-up-form + embed').remove();
-            //$('#sign-up-form').after('<embed src="'+e.target.result+'" width="450" height="300">');
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-
-$("#image").change(function () {
-    filePreview(this);
-});
-
-</script> -->
+    <!-- Preview Image -->
 
 <script>
     function previewImage(input){
@@ -166,7 +147,7 @@ $("#image").change(function () {
     }
 </script>
 
-<!--===========================================================-->
+<!--============================================================================================================-->
 
     <!-- jQuery UI DatePicker -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

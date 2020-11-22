@@ -30,7 +30,7 @@
       <td><?php echo ucfirst($row['firstname']) ?></td>
       <td><?php echo ucfirst($row['lastname']) ?></td>
       <td><?php echo $row['adventures_name'] ?></td>
-      <td><?php echo $row['status1'] ?></td>
+      <td><?php echo $row['status_name'] ?></td>
       <td>
         <a href ="email-resend-registration.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-info">Email</a>
         <a href ="view-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-primary">View</a>
