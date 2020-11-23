@@ -1,5 +1,5 @@
 <?php
-    $title = 'View Record';
+    $title = 'View Client Details';
     require_once 'includes/header.php';
     //require_once 'includes/auth_check.php';
     require_once 'db/db_connect.php';
@@ -11,65 +11,80 @@
     else{
         $client_id = $_GET['client_id'];
         $result = $client_crud->getClientDetails($client_id);
-
+ 
         echo'
         <br>
-        <div class="card text-center text-white bg-dark mb-3 mx-auto" style="width: 20rem">
-        <img class="card-img-top" src="'.$result['imgpath'].'" alt="Adventurer Picture">
-        <div class="card-body">
-        <h3 class="card-title">'.strtoupper($result['firstname']).' '.strtoupper($result['lastname']).'</h3>
-
-        <h4>'.$result['adventures_name'].'</h4><br>     
+        <h2 class ="text-center">View '.ucfirst($result['firstname']).' '.ucfirst($result['lastname']).'\'s Details</h2>
         
-        <p>
-        Status <br>
-        '.$result['status_name'].' <br>
-        Date Registered <br>
-        '.$result['registered_on'].' <br>
-        </p>
-        ';
+        <div class="card text-white bg-dark mb-3 mx-auto" style="width: 960px">
+        <div class="row no-gutters">
+    <div class="col-md-4">
+        <img src="'.$result['imgpath'].'." class="card-img" alt="Adventurer Picture">
+    </div>
 
-        if(empty($result['updated_on'])){
-  
-        }else {
-            echo'
+    <div class="col-md-4">
+        <div class="card-body">
+            <h3 class="card-title">'.strtoupper($result['firstname']).' '.strtoupper($result['lastname']).'</h3>
+            <h5>'.$result['adventures_name'].'</h5>
             <p>
-            Date Updated <br>
-            '.$result['updated_on'].' <br>
+            <b>Status</b><br>
+            '.$result['status_name'].' <br>
+            <b>Address</b><br>
+            '.$result['dob'].' <br>
             </p>
             ';
-        }
+            echo'
+        </div>
+    </div>
 
+    <div class="col-md-4">
+        <div class="card-body">
+            <p>
+            <b>Date of Birth</b><br>
+            '.$result['dob'].' <br>
+            <b>Gender</b><br>
+            '.$result['dob'].' <br>
+            <b>Email Address</b><br>
+            '.$result['email'].'<br>
+            </p>
+            ';
+            if(empty($result['contact_num'])){
+
+            } else {
+                echo'
+                <p>
+                <b>Contact Number</b><br>
+                '.$result['contact_num'].'<br><br>
+                </p>
+                ';
+            }
+            echo'
+            <b>Date Registered</b><br>
+            '.$result['registered_on'].' <br>
+        </div>
+    </div>
+                ';
+    if(empty($result['updated_on'])){
+  
+    } else {
         echo'
         <p>
-        <b>Date of Birth</b><br>
-        '.$result['dob'].' <br>
-        <b>Email Address</b><br>
-        '.$result['email'].'<br>
+        Date Updated <br>
+        '.$result['updated_on'].' <br>
         </p>
         ';
-
-        if(empty($result['contact_num'])){
-            echo'<br>';
-        }else {
-            echo'
-            <p>
-            <b>Contact Number</b><br>
-            '.$result['contact_num'].'<br><br>
-            </p>
-            ';
-            }
+    } 
 ?>
-<p>
-<a href ="view-all-clients.php" class ="btn btn-info " >View All Clients</a>
-<a href ="edit.php?id=<?php echo $result['attendee_id'] ?>" class ="btn btn-warning ">Edit</a>
-<a href ="viewdelete.php?id=<?php echo $result['attendee_id'] ?>" class ="btn btn-danger ">Delete</a>
-</p> 
-</div>
-</div>
-
-</div>
-
+        </div>
+    </div>
+    <p class="text-center">
+        <a href ="view-all-clients.php" class ="btn btn-info " >View All Clients</a>
+        <a href ="edit.php?id=<?php echo $result['attendee_id'] ?>" class ="btn btn-warning ">Edit</a>
+        <a href ="viewdelete.php?id=<?php echo $result['attendee_id'] ?>" class ="btn btn-danger ">Delete</a>
+    </p> 
+    </div>
+    </div>
+    </div>
 <?php }  ?>
 
 <?php

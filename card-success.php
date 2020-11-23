@@ -36,44 +36,64 @@
         echo'
         <br>
         <h2 class="text-center">Adventure Registered and Loading.....</h2>
-        <div class="card text-center text-white bg-dark mb-3 mx-auto" style="width: 20rem">
-          <img class="card-img-top" src="'.$imgpath.'" alt="Adventurer Picture">
-          <div class="card-body">
+        
+        <div class="card text-white bg-dark mb-3 mx-auto" style="width: 960px">
+        <div class="row no-gutters">
+    <div class="col-md-4">
+        <img src="'.$imgpath.'" class="card-img" alt="Adventurer Picture">
+    </div>
+
+    <div class="col-md-5">
+        <div class="card-body">
             <h3 class="card-title">'.strtoupper($firstname).' '.strtoupper($lastname).'</h3>
             ';
             ?>
             <?php while($row = $results->fetch(PDO::FETCH_ASSOC)) { ?>
-                <?php 
-                    if ($row['adventures_id'] == $adventures) 
-                    echo '<h4>'.$row['adventures_name'].'</h><br>';
-                ?>
-            <?php } ?>
-            <?php
-            echo'     
-              <p>
-              <b>Date of Birth</b><br>
-              '.$dob.' <br>
-              <b>Email Address</b><br>
-              '.$email.' <br>
-              ';
-              if(empty($contact_num)){
-                echo'<br>';
-              }else {
+              <?php 
+                  if ($row['adventures_id'] == $adventures) 
+                  echo '<h5>'.$row['adventures_name'].'</h5>';
+              ?>
+          <?php } ?>
+          <?php
+          echo'
+            <p>
+            <b>Address</b><br>
+            '.$dob.' <br>
+            <b>Date of Birth</b><br>
+            '.$dob.' <br>
+            </p>
+            ';
+            echo'
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card-body">
+            <p>
+            <b>Gender</b><br>
+            '.$dob.'<br>
+            <b>Email Address</b><br>
+            '.$email.'<br>
+            </p>
+            ';
+            if(empty($contact_num)){
+
+            } else {
                 echo'
                 <p>
                 <b>Contact Number</b><br>
                 '.$contact_num.'<br><br>
                 </p>
                 ';
-             }
-              ?>
-            <p>
-            <a href ="index.php" class ="btn btn-success " >Home</a>
-            <a href ="view-all-clients.php" class ="btn btn-info " >View All Clients</a>
-          </p> 
+            }
+           echo'
+        </div>
+    </div>
+                ';
+                ?>
+   
           </div>
       </div>
-          
         </div>
     <?php
       } else {

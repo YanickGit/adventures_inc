@@ -9,17 +9,17 @@
     ?>
     
     <br>
-    <h2><?php echo $title;?></h2>
+    <h2 class ="text-center"><?php echo $title;?></h2>
 
     <style type="text/css">
 form{float: left;width: 100%;}
 img, embed{margin-top: 20px;}
 </style>
-     
+
     <form method="post" action="card-success.php" enctype="multipart/form-data" autocomplete="off">
     
     <div class="row">
-    <div class="col">
+    <div class="col text-center">
     <img id="signup-img" src="images/team/__blank.jpg" alt="Placeholder">
     <small id="help" class="form-text text-muted">Preview</small>
       </div>
@@ -45,11 +45,29 @@ img, embed{margin-top: 20px;}
       </div>
     </div>
     <br>
+
+    <div class="row">
+      <div class="col">
+    <textarea class="form-control" id="address" placeholder="Type Your address" name="address" required></textarea>
+		<small id="addressHelp" class="form-text text-muted">Type your address.</small>
+      </div>
+      <div class="col">
+      <select class="form-control" id="gender" name="gender" required>
+                   
+                   <?php while($row = $results->fetch(PDO::FETCH_ASSOC)) { ?>
+                       <option value="<?php echo $row['adventures_id'] ?>"><?php echo $row['adventures_name'] ?></option>
+                   <?php } ?>
+               
+               </select>
+           <small id="help" class="form-text text-muted">Select your gender.</small>
+      </div>
+    </div>
+    <br>
 	
 	<div class="row">
       <div class="col">
 		<select class="form-control" id="adventures" name="adventures" required>
-                   
+          
                     <?php while($row = $results->fetch(PDO::FETCH_ASSOC)) { ?>
                         <option value="<?php echo $row['adventures_id'] ?>"><?php echo $row['adventures_name'] ?></option>
                     <?php } ?>

@@ -2,7 +2,7 @@
     <?php
         $title = 'Login';
         require_once 'includes/header.php';
-        //require_once 'db/db_connect.php';
+        require_once 'db/db_connect.php';
 
         // If data was submitted via a form request, then..
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -10,7 +10,7 @@
             $password = $_POST['password'];
             $new_password = md5($password.$username);
 
-            $result = $user_crud->getUser($username, $new_password);
+            $result = $user_crud->getUser($username, $password);
             if (!$result){
                     echo '<div class="alert alert-danger">Username or Password is incorrect! Please try again. </div>';
             } else {

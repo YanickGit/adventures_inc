@@ -1,7 +1,7 @@
 <?php
     $title = 'Manage Clients';
     require_once 'includes/header.php';
-    //require_once 'includes/auth_check.php';
+    require_once 'includes/auth_check.php';
     require_once 'db/db_connect.php';
 
     //get all clients
@@ -42,7 +42,7 @@
   </tbody> 
 </table>
 <br>
-<a href ="viewdeletedrecords.php" class ="btn btn-warning btn-block">View Deleted</a>
+<a href ="viewdeletedrecords.php" class ="btn btn-warning btn-block">View Past Adventurers</a>
 <?php
     require_once 'includes/footer.php';
 ?>

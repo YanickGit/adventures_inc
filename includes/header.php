@@ -1,5 +1,5 @@
 <?php
-  //require_once 'includes/session.php';
+  require_once 'includes/session.php';
 ?>
 
 <!doctype html>
@@ -59,6 +59,7 @@
           <a class="<?php if ($title == 'Join The Adventure'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="sign-up.php">Join The Adventure</a>
           <a class="<?php if ($title == 'The Team'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="the-team.php">The Team</a>
           <a class="<?php if ($title == 'Contact Us'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="contact-us.php">Contact Us</a>
+          
         </div>
         <div class="navbar-nav ml-auto">
             <?php 

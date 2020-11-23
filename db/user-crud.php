@@ -40,9 +40,9 @@
             }
         }
 
-    public function getAdmin($username, $password){
+    public function getUser($username, $password){
         try {
-            $sql = "SELECT * FROM `admin_tbl` 
+            $sql = "SELECT * FROM `users_tbl` 
             WHERE `username` = :username AND `password` = :password";
 
             $statement = $this->db->prepare($sql);

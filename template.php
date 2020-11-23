@@ -6,7 +6,7 @@
 ?>
 
 <br>
-<h2><?php echo $title;?></h2>
+<h2 class="text-center"><?php echo $title;?></h2>
 <p>Resize the browser window to see the effect.</p>
 
 <?php
