@@ -5,7 +5,8 @@
         require_once 'db/db_connect.php';
 
         //get all adventures
-        $results = $client_crud->getAdventures();
+        $adventures_results = $client_crud->getAdventures();
+        $gender_results = $client_crud->getGender();
     ?>
     
     <br>
@@ -54,8 +55,8 @@ img, embed{margin-top: 20px;}
       <div class="col">
       <select class="form-control" id="gender" name="gender" required>
                    
-                   <?php while($row = $results->fetch(PDO::FETCH_ASSOC)) { ?>
-                       <option value="<?php echo $row['adventures_id'] ?>"><?php echo $row['adventures_name'] ?></option>
+                   <?php while($gender_row = $gender_results->fetch(PDO::FETCH_ASSOC)) { ?>
+                       <option value="<?php echo $gender_row['gender_id'] ?>"><?php echo $gender_row['gender_name'] ?></option>
                    <?php } ?>
                
                </select>
@@ -68,8 +69,8 @@ img, embed{margin-top: 20px;}
       <div class="col">
 		<select class="form-control" id="adventures" name="adventures" required>
           
-                    <?php while($row = $results->fetch(PDO::FETCH_ASSOC)) { ?>
-                        <option value="<?php echo $row['adventures_id'] ?>"><?php echo $row['adventures_name'] ?></option>
+                    <?php while($adventures_row = $adventures_results->fetch(PDO::FETCH_ASSOC)) { ?>
+                        <option value="<?php echo $adventures_row['adventures_id'] ?>"><?php echo $adventures_row['adventures_name'] ?></option>
                     <?php } ?>
                 
                 </select>

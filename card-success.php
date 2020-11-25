@@ -9,25 +9,27 @@
       //extract values from the $_POST array
       $firstname = $_POST['firstname'];
       $lastname = $_POST['lastname'];
+      $address_c = $_POST['address_c'];
+      $gender = $_POST['gender'];
       $dob = $_POST['dob'];
       $email = $_POST['email'];
       $adventures = $_POST['adventures'];
       $contact_num = $_POST['contact_num'];
-      //$imgpath = "images/profile/".$_FILES['image']['name'];
 
       require_once 'includes/upload-image.php';
 
       if (empty($imgpath)) {
        $imgpath = "images/profile/__defaultCrop.jpg";
-       //echo $imgpath;
      } 
 
       //call function to insert and track if success or not
-      $isSuccess = $client_crud->insertClients (trim(strtolower($firstname)), trim(strtolower($lastname)), strtolower($imgpath), $dob, $adventures, trim(strtolower($email)), $contact_num);
-      //echo '<br>'.$imgpath;
+      $isSuccess = $client_crud->insertClients (trim(strtolower($firstname)), trim(strtolower($lastname)), trim(strtolower($address_c)), strtolower($imgpath), $gender, $dob, $adventures, trim(strtolower($email)), $contact_num);
        
       //get all adventures
-      $results = $client_crud->getAdventures();
+      $adventure_results = $client_crud->getAdventures();
+
+       //get all gender
+       $gender_results = $client_crud->getGender();
 
       
       if ($isSuccess) {
@@ -48,39 +50,47 @@
             <h3 class="card-title">'.strtoupper($firstname).' '.strtoupper($lastname).'</h3>
             ';
             ?>
-            <?php while($row = $results->fetch(PDO::FETCH_ASSOC)) { ?>
+            <?php while($adventure_row = $adventure_results->fetch(PDO::FETCH_ASSOC)) { ?>
               <?php 
-                  if ($row['adventures_id'] == $adventures) 
-                  echo '<h5>'.$row['adventures_name'].'</h5>';
+                  if ($adventure_row['adventures_id'] == $adventures) 
+                  echo '<h5>'.$adventure_row['adventures_name'].'</h5>';
               ?>
           <?php } ?>
           <?php
           echo'
             <p>
             <b>Address</b><br>
-            '.$dob.' <br>
+            '.$address_c.' <br>
             <b>Date of Birth</b><br>
-            '.$dob.' <br>
-            </p>
-            ';
-            echo'
+            '.$dob.' 
+            <br>
+          
+        
         </div>
     </div>
 
     <div class="col-md-3">
         <div class="card-body">
-            <p>
             <b>Gender</b><br>
-            '.$dob.'<br>
+            ';
+            ?>
+            <?php while($gender_row = $gender_results->fetch(PDO::FETCH_ASSOC)) { ?>
+              <?php 
+                  if ($gender_row['gender_id'] == $gender) 
+                  echo''.$gender_row['gender_name'].'';
+              ?>
+          <?php } ?>
+          <?php 
+          echo'   
+            <br><br>
             <b>Email Address</b><br>
-            '.$email.'<br>
-            </p>
+            '.$email.'
+            <br>
             ';
             if(empty($contact_num)){
 
             } else {
                 echo'
-                <p>
                 <b>Contact Number</b><br>
                 '.$contact_num.'<br><br>
                 </p>

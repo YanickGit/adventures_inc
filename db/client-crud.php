@@ -15,11 +15,11 @@
         }
 
         //function to insert a new record
-        public function insertClients ($firstname, $lastname, $imgpath, $dob, $adventures, $email, $contact_num){
+        public function insertClients ($firstname, $lastname, $address_c, $imgpath, $gender, $dob, $adventures, $email, $contact_num){
             try {
                 //define sql statement to be executed 
-                $sql = "INSERT INTO `clients_tbl`(`firstname`, `lastname`, `imgpath`, `dob`, `adventures_fk`, `email`, `contact_num`) 
-                VALUES (:firstname, :lastname, :imgpath, :dob, :adventures, :email, :contact_num)";
+                $sql = "INSERT INTO `clients_tbl`(`firstname`, `lastname`, `address`, `imgpath`, `gender_fk`, `dob`, `adventures_fk`, `email`, `contact_num`) 
+                VALUES (:firstname, :lastname, :address_c, :imgpath, :gender, :dob, :adventures, :email, :contact_num)";
                 
                 //prepare the sql statement for execution
                 $statement = $this->db->prepare($sql);
@@ -27,7 +27,9 @@
                 //bind all placeholders to the actual values
                 $statement->bindparam(':firstname',$firstname);
                 $statement->bindparam(':lastname',$lastname);
+                $statement->bindparam(':address_c',$address_c);
                 $statement->bindparam(':imgpath',$imgpath);
+                $statement->bindparam(':gender',$gender);
                 $statement->bindparam(':dob',$dob);
                 $statement->bindparam(':adventures',$adventures);
                 $statement->bindparam(':email',$email);
@@ -177,6 +179,17 @@
         public function getAdventures (){
             try {
                 $sql = "SELECT * FROM `adventures_tbl`";
+                $results =$this->db->query($sql);
+                return $results;
+            } catch(PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
+
+        public function getGender (){
+            try {
+                $sql = "SELECT * FROM `gender_tbl`";
                 $results =$this->db->query($sql);
                 return $results;
             } catch(PDOException $e) {

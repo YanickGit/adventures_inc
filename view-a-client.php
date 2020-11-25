@@ -1,7 +1,7 @@
 <?php
     $title = 'View Client Details';
     require_once 'includes/header.php';
-    //require_once 'includes/auth_check.php';
+    require_once 'includes/auth_check.php';
     require_once 'db/db_connect.php';
 
     //get attendee by id
@@ -14,7 +14,7 @@
  
         echo'
         <br>
-        <h2 class ="text-center">View '.ucfirst($result['firstname']).' '.ucfirst($result['lastname']).'\'s Details</h2>
+        <h2 class ="text-center">'.ucfirst($result['firstname']).' '.ucfirst($result['lastname']).'\'s Details</h2>
         
         <div class="card text-white bg-dark mb-3 mx-auto" style="width: 960px">
         <div class="row no-gutters">
@@ -45,35 +45,39 @@
             <b>Gender</b><br>
             '.$result['dob'].' <br>
             <b>Email Address</b><br>
-            '.$result['email'].'<br>
-            </p>
+            '.$result['email'].'
+            <br>
             ';
             if(empty($result['contact_num'])){
 
             } else {
                 echo'
-                <p>
+                
                 <b>Contact Number</b><br>
-                '.$result['contact_num'].'<br><br>
-                </p>
+                '.$result['contact_num'].'
+                <br>
                 ';
             }
             echo'
             <b>Date Registered</b><br>
-            '.$result['registered_on'].' <br>
-        </div>
-    </div>
-                ';
+            '.$result['registered_on'].' 
+            <br>
+            ';
     if(empty($result['updated_on'])){
   
     } else {
         echo'
-        <p>
-        Date Updated <br>
+        <b>Date Updated</b><br>
         '.$result['updated_on'].' <br>
         </p>
         ';
     } 
+        echo'
+
+        </div>
+    </div>
+    ';
+                
 ?>
         </div>
     </div>
@@ -85,6 +89,7 @@
     </div>
     </div>
     </div>
+
 <?php }  ?>
 
 <?php
