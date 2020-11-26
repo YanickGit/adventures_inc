@@ -24,6 +24,7 @@
 
       //call function to insert and track if success or not
       $isSuccess = $client_crud->insertClients (trim(strtolower($firstname)), trim(strtolower($lastname)), trim(strtolower($address_c)), strtolower($imgpath), $gender, $dob, $adventures, trim(strtolower($email)), $contact_num);
+     
        
       //get all adventures
       $adventure_results = $client_crud->getAdventures();
@@ -31,13 +32,28 @@
        //get all gender
        $gender_results = $client_crud->getGender();
 
-      
       if ($isSuccess) {
         //require_once 'email-registration.php';
 
         echo'
         <br>
-        <h2 class="text-center">Adventure Registered and Loading.....</h2>
+        <h2 class="text-center">Thank You for Registering with Adventures Inc.</h2>
+        <br>
+        <h3 class ="text-center"> ';
+        ?>
+        <?php
+        if ($gender == "1"){
+          echo'Mr.'; 
+        } elseif ($gender == "2") {
+          echo 'Miss';
+        } else {
+          
+        }
+        ?>
+
+        <?php
+        echo'
+        '.ucfirst($firstname).' '.ucfirst($lastname).'\'s Registration Details</h3>
         
         <div class="card text-white bg-dark mb-3 mx-auto" style="width: 960px">
         <div class="row no-gutters">
@@ -82,7 +98,7 @@
           <?php } ?>
           <?php 
           echo'   
-            <br><br>
+            <br>
             <b>Email Address</b><br>
             '.$email.'
             <br>

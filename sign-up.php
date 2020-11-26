@@ -6,6 +6,8 @@
 
         //get all adventures
         $adventures_results = $client_crud->getAdventures();
+
+        //get all gender
         $gender_results = $client_crud->getGender();
     ?>
     
@@ -13,9 +15,9 @@
     <h2 class ="text-center"><?php echo $title;?></h2>
 
     <style type="text/css">
-form{float: left;width: 100%;}
-img, embed{margin-top: 20px;}
-</style>
+    form{float: left;width: 100%;}
+    img, embed{margin-top: 20px;}
+    </style>
 
     <form method="post" action="card-success.php" enctype="multipart/form-data" autocomplete="off">
     
@@ -49,7 +51,7 @@ img, embed{margin-top: 20px;}
 
     <div class="row">
       <div class="col">
-    <textarea class="form-control" id="address" placeholder="Type Your address" name="address" required></textarea>
+    <textarea class="form-control" id="address_c" placeholder="Type Your address" name="address_c" required></textarea>
 		<small id="addressHelp" class="form-text text-muted">Type your address.</small>
       </div>
       <div class="col">

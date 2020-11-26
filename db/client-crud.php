@@ -17,6 +17,10 @@
         //function to insert a new record
         public function insertClients ($firstname, $lastname, $address_c, $imgpath, $gender, $dob, $adventures, $email, $contact_num){
             try {
+                $result =$this->getClientbyEmail($email);
+                if ($result['emailCount'] > 0){
+                    return false;
+                } else {
                 //define sql statement to be executed 
                 $sql = "INSERT INTO `clients_tbl`(`firstname`, `lastname`, `address`, `imgpath`, `gender_fk`, `dob`, `adventures_fk`, `email`, `contact_num`) 
                 VALUES (:firstname, :lastname, :address_c, :imgpath, :gender, :dob, :adventures, :email, :contact_num)";
@@ -38,7 +42,7 @@
                 //execute statement
                 $statement->execute();
                 return true;
-
+            }
             } catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
@@ -108,6 +112,7 @@
                 $sql = "SELECT * FROM `clients_tbl` 
                 inner join adventures_tbl on adventures_fk = adventures_id 
                 inner join clients_status_tbl on client_status_fk = status_id
+                inner join gender_tbl on gender_fk = gender_id
                 where client_id = :client_id";
 
                 $statement = $this->db->prepare($sql);
@@ -213,11 +218,26 @@
             }
         }
 
+        public function getClientbyEmail ($email){
+            try {
+                $sql = "SELECT COUNT(email) AS emailCount FROM clients_tbl WHERE `email` = :email";
+    
+                $statement = $this->db->prepare($sql);
+                $statement->bindparam(':email', $email);   
+                $statement->execute();
+                $result = $statement->fetch();
+                return $result;
+                } catch (PDOException $e) {
+                    echo $e->getMessage();
+                    return false;
+                }
+             }
+
         public function getStatus (){
             try {
-                $sql = "SELECT * FROM `status_tbl`";
-                $resultsStatus =$this->db->query($sql);
-                return $resultsStatus;
+                $sql = "SELECT * FROM `clients_status_tbl`";
+                $status_results =$this->db->query($sql);
+                return $status_results;
             } catch(PDOException $e) {
                 echo $e->getMessage();
                 return false;

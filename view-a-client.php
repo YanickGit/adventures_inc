@@ -30,7 +30,7 @@
             <b>Status</b><br>
             '.$result['status_name'].' <br>
             <b>Address</b><br>
-            '.$result['dob'].' <br>
+            '.$result['address'].' <br>
             </p>
             ';
             echo'
@@ -43,7 +43,7 @@
             <b>Date of Birth</b><br>
             '.$result['dob'].' <br>
             <b>Gender</b><br>
-            '.$result['dob'].' <br>
+            '.$result['gender_name'].' <br>
             <b>Email Address</b><br>
             '.$result['email'].'
             <br>

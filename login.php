@@ -10,7 +10,7 @@
             $password = $_POST['password'];
             $new_password = md5($password.$username);
 
-            $result = $user_crud->getUser($username, $password);
+            $result = $user_crud->getUser($username, $new_password);
             if (!$result){
                     echo '<div class="alert alert-danger">Username or Password is incorrect! Please try again. </div>';
             } else {

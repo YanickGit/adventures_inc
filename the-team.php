@@ -11,7 +11,7 @@
       <div class="theTeam">
         <h3>Yan Levy</h3>
         <p class="title">CEO & Founder</p>
-        <p>"Leadership is a potent combination of strategy and character. But if you must be without one, be without the strategy." <br>" – Norman Schwarzkopf</p>
+        <p>"Leadership is a potent combination of strategy and character. But if you must be without one, be without the strategy." <br> – Norman Schwarzkopf</p>
         <p>yan-levy@adventures.inc</p>
         <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
       </div>
