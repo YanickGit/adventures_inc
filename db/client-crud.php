@@ -195,8 +195,8 @@
         public function getGender (){
             try {
                 $sql = "SELECT * FROM `gender_tbl`";
-                $results =$this->db->query($sql);
-                return $results;
+                $gender_results =$this->db->query($sql);
+                return $gender_results;
             } catch(PDOException $e) {
                 echo $e->getMessage();
                 return false;
@@ -225,8 +225,8 @@
                 $statement = $this->db->prepare($sql);
                 $statement->bindparam(':email', $email);   
                 $statement->execute();
-                $result = $statement->fetch();
-                return $result;
+                $email_result = $statement->fetch();
+                return $email_result;
                 } catch (PDOException $e) {
                     echo $e->getMessage();
                     return false;
