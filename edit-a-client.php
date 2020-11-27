@@ -34,7 +34,7 @@
     <img id="signup-img" src="<?php echo $client_result['imgpath'] ?>" alt="Client Image"> 
     </div>
 
-    <form method="post" action="edit-a-client-action.php" enctype="multipart/form-data" autocomplete="off">
+    <form method="post" action="action-edit-a-client.php" enctype="multipart/form-data" autocomplete="off">
         <input type="hidden" id="client_id" name="client_id" value="<?php echo $client_result['client_id'] ?>" />
         <input type="hidden" id="registered_on" name="registered_on" value="<?php echo $client_result['registered_on'] ?>" />
 

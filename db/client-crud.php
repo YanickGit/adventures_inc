@@ -1,12 +1,19 @@
 <?php 
     class client_crud {
+//===============================================================================================================
+        //Objects
+
         //private database object
         private $db;
 
-        private $active = "1";
-        private $softDelete = "0";
-        private $softDeleteFK = "4";
-        private $activateFK = "3";
+        private $currentClientsFK = "3";
+        private $pastClientsFK = "4";
+
+        private $softDeletedClientsFK = "1";
+        private $nonDeletedClientsFK = "2";
+
+        private $softDeleteClientsFK = "1";
+        private $restoreDeletedClientsFK = "2";
         
 
         //constructor to initialize private variable to the database connection
@@ -14,7 +21,9 @@
             $this->db = $db_connect;
         }
 
-        //function to insert a new record
+//===============================================================================================================
+        //Inserting of Records (function)
+
         public function insertClients ($firstname, $lastname, $address_c, $imgpath, $gender, $dob, $adventures, $email, $contact_num){
             try {
                 $result =$this->getClientbyEmail($email);
@@ -49,23 +58,27 @@
             }
         }
 
-        public function editAttendee($client_id, $firstname, $lastname, $dob, $specialization, $email, $contact_num, $status1){
+//===============================================================================================================
+             //Editing of Records (function)
+
+        public function editClients($client_id, $client_status, $firstname, $lastname, $address_c, $gender, $dob, $adventures, $contact_num){
             try {
-                $sql = "UPDATE `attendee_tbl` 
-                SET `firstname`=:firstname,`lastname`=:lastname, `specialization_fk`=:specialization,`dob`=:dob,`email`=:email,`contact_num`=:contact_num, `status_fk`=:status1 
-                WHERE attendee_id = :id";
+                $sql = "UPDATE `clients_tbl` 
+                SET `client_status_fk`=:client_status, `firstname`=:firstname,`lastname`=:lastname, `address`=:address_c, `gender_fk`=:gender, `adventures_fk`=:adventures,`dob`=:dob,`contact_num`=:contact_num 
+                WHERE client_id = :client_id";
 
              //bind all placeholders to the actual values
                 
                 $statement = $this->db->prepare($sql);
-                $statement->bindparam(':client_id',$client_id);              
+                $statement->bindparam(':client_id',$client_id);
+                $statement->bindparam(':client_status',$client_status);              
                 $statement->bindparam(':firstname',$firstname);
                 $statement->bindparam(':lastname',$lastname);
+                $statement->bindparam(':address_c',$address_c);
+                $statement->bindparam(':gender',$gender);
                 $statement->bindparam(':dob',$dob);
-                $statement->bindparam(':specialization',$specialization);
-                $statement->bindparam(':email',$email);
+                $statement->bindparam(':adventures',$adventures);
                 $statement->bindparam(':contact_num',$contact_num);
-                $statement->bindparam(':status1',$status1);
 
              $statement->execute();
              return true;
@@ -76,12 +89,17 @@
             }
         }
 
-        public function getAllClients (){
+//===============================================================================================================
+             //Retrieval of Records (functions)
+
+        public function getAllCurrentClients (){
             try {
                 $sql = "SELECT * FROM `clients_tbl` 
                 inner join adventures_tbl on adventures_fk = adventures_id 
                 inner join clients_status_tbl on client_status_fk = status_id
-                where clients_status_tbl.status_num = $this->active";
+                inner join clients_isdeleted_tbl on client_isdeleted_fk = deleted_id
+                where clients_status_tbl.status_id = $this->currentClientsFK
+                AND clients_isdeleted_tbl.deleted_id = $this->nonDeletedClientsFK";
 
                 $results =$this->db->query($sql);
                 return $results;
@@ -92,15 +110,18 @@
             }
         }
 
-        public function getDeletedAttendees (){
+        public function getAllPastClients (){
             try {
-                $sql = "SELECT * FROM `attendee_tbl` 
-                inner join specialization_tbl on specialization_fk = specialization_id 
-                inner join status_tbl on status_fk = status_id
-                where status_tbl.status_num = $this->softDelete";
+                $sql = "SELECT * FROM `clients_tbl` 
+                inner join adventures_tbl on adventures_fk = adventures_id 
+                inner join clients_status_tbl on client_status_fk = status_id
+                inner join clients_isdeleted_tbl on client_isdeleted_fk = deleted_id
+                where clients_status_tbl.status_id = $this->pastClientsFK
+                AND clients_isdeleted_tbl.deleted_id = $this->nonDeletedClientsFK";
 
                 $results =$this->db->query($sql);
                 return $results;
+                
             } catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
@@ -126,97 +147,68 @@
             }
         }
 
-        public function deleteAttendee($id){
+//===============================================================================================================
+             //Delete Related (functions)
+
+        public function getAllDeletedClients (){
             try {
-                $sql = "DELETE FROM `attendee_tbl` 
-                WHERE attendee_id = :id";
+                $sql = "SELECT * FROM `clients_tbl` 
+                inner join adventures_tbl on adventures_fk = adventures_id 
+                inner join clients_status_tbl on client_status_fk = status_id
+                inner join gender_tbl on gender_fk = gender_id
+                inner join clients_isdeleted_tbl on client_isdeleted_fk = deleted_id
+                where clients_isdeleted_tbl.deleted_num = $this->softDeletedClientsFK";
 
-                $statement = $this->db->prepare($sql);
-                $statement->bindparam(':id', $id);        
-                $statement->execute();
-                return true;    
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-                return false;
-            }
-        }
-
-        public function deleteSoftAttendee($id){
-            try {
-                $sql = "UPDATE `attendee_tbl` 
-                SET `status_fk`= $this->softDeleteFK
-                WHERE attendee_id = :id";
-
-                //bind all placeholders to the actual values
-                   
-                   $statement = $this->db->prepare($sql);
-                   $statement->bindparam(':id',$id);              
-                      
-                $statement->execute();
-                return true;
-
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-                return false;
-            }
-        }
-
-        public function activateAttendee($id){
-            try {
-                $sql = "UPDATE `attendee_tbl` 
-                SET `status_fk`= $this->activateFK
-                WHERE attendee_id = :id";
-
-                //bind all placeholders to the actual values
-                   
-                   $statement = $this->db->prepare($sql);
-                   $statement->bindparam(':id',$id);              
-                      
-                $statement->execute();
-                return true;
-
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-                return false;
-            }
-        }
-
-        public function getAdventures (){
-            try {
-                $sql = "SELECT * FROM `adventures_tbl`";
                 $results =$this->db->query($sql);
                 return $results;
-            } catch(PDOException $e) {
+            } catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
             }
         }
 
-        public function getGender (){
+        public function deleteSoftClients($client_id){
             try {
-                $sql = "SELECT * FROM `gender_tbl`";
-                $gender_results =$this->db->query($sql);
-                return $gender_results;
-            } catch(PDOException $e) {
-                echo $e->getMessage();
-                return false;
-            }
-        }
+                $sql = "UPDATE `clients_tbl` 
+                SET `client_isdeleted_fk`= $this->softDeleteClientsFK
+                WHERE client_id = :client_id";
 
-        public function getSpecializationId ($id){
-            try {
-                $sql = "SELECT * FROM `specialization_tbl`
-                WHERE specialization_id = :id";
-                $statement = $this->db->prepare($sql);
-                $statement->bindparam(':id',$id);              
+                //bind all placeholders to the actual values
+                   
+                   $statement = $this->db->prepare($sql);
+                   $statement->bindparam(':client_id',$client_id);              
+                      
                 $statement->execute();
                 return true;
-                
-            } catch(PDOException $e) {
+
+            } catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
             }
         }
+
+        public function restoreDeletedClients($client_id){
+            try {
+                $sql = "UPDATE `clients_tbl` 
+                SET `client_isdeleted_fk`= $this->restoreDeletedClientsFK
+                WHERE client_id = :client_id";
+
+                //bind all placeholders to the actual values
+                   
+                   $statement = $this->db->prepare($sql);
+                   $statement->bindparam(':client_id',$client_id);              
+                      
+                $statement->execute();
+                return true;
+
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
+
+//===============================================================================================================
+             // (functions)
 
         public function getClientbyEmail ($email){
             try {
@@ -232,6 +224,31 @@
                     return false;
                 }
              }
+
+//===============================================================================================================
+             //Dropdown Options (functions)
+
+             public function getAdventures (){
+                try {
+                    $sql = "SELECT * FROM `adventures_tbl`";
+                    $results =$this->db->query($sql);
+                    return $results;
+                } catch(PDOException $e) {
+                    echo $e->getMessage();
+                    return false;
+                }
+            }
+    
+            public function getGender (){
+                try {
+                    $sql = "SELECT * FROM `gender_tbl`";
+                    $gender_results =$this->db->query($sql);
+                    return $gender_results;
+                } catch(PDOException $e) {
+                    echo $e->getMessage();
+                    return false;
+                }
+            }
 
         public function getStatus (){
             try {

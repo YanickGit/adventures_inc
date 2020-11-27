@@ -1,5 +1,5 @@
 <?php
-    $title = 'Manage Clients';
+    $title = 'Manage Deleted Clients';
     require_once 'includes/header.php';
     require_once 'includes/auth_check.php';
     require_once 'db/db_connect.php';

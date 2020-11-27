@@ -27,8 +27,9 @@
         <img id="login-img" src="images/site/logo.png" alt="logo" >
     </div>
 
-    <form  action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" method="post" autocomplete="off" >
-        <div class="form-group">
+    <form  action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" method="post" class="col-sm-4 mx-auto" autocomplete="off" >
+    <br>    
+    <div class="form-group">
             <label for="username">Username*</label>
             <input type="text" class="form-control" id="username" name="username" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_POST['username'] ?>" required>
             <?php if (empty($username) && $_SERVER['REQUEST_METHOD'] == 'POST') echo "<p class='text-danger'>$username_error</p>";?>

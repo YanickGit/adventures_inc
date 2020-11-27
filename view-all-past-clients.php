@@ -1,5 +1,5 @@
 <?php
-    $title = 'Manage Clients';
+    $title = 'Manage Past Clients';
     require_once 'includes/header.php';
     require_once 'includes/auth_check.php';
     require_once 'db/db_connect.php';
@@ -36,8 +36,7 @@
       <td><?php echo $row['status_name'] ?></td>
       <td>
          <a href ="view-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-primary">View</a>
-        <a href ="edit-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-warning">Edit</a>
-        <a href ="view-delete-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-danger">Delete</a>
+        <a href ="view-delete-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-danger">Delete...</a>
       </td>
     </tr>
     <?php } ?>

@@ -4,8 +4,4 @@
     <img src="images/site/error-img.png" class="rounded" alt="error image" height="300px" width="350px">
     <br><br>
     <h4>Please try again...</h4>
-    <p>
-        <a href ="index.php" class ="btn btn-success btn-lg" >Homepage</a>
-        <a href ="viewrecords.php" class ="btn btn-info btn-lg" >View List</a>
-    </p>
 </div>

@@ -84,7 +84,7 @@
     <p class="text-center">
         <a href ="view-all-current-clients.php" class ="btn btn-info " >View All Clients</a>
         <a href ="edit-a-client.php?client_id=<?php echo $result['client_id'] ?>" class ="btn btn-warning ">Edit</a>
-        <a href ="viewdelete.php?client_id=<?php echo $result['client_id'] ?>" class ="btn btn-danger ">Delete</a>
+        <a href ="view-delete-a-client.php?client_id=<?php echo $result['client_id'] ?>" class ="btn btn-danger ">Delete...</a>
     </p> 
     </div>
     </div>
