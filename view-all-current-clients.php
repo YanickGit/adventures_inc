@@ -5,10 +5,13 @@
     require_once 'db/db_connect.php';
 
     //get all clients
-    $results = $client_crud->getAllClients();
+    $results = $client_crud->getAllCurrentClients();
 ?>
 
-<h1 class = "text-center">Registered Adventurers</h1>
+<h1 class = "text-center">Current Adventurers</h1>
+<br>
+
+<?php include 'includes/view-all-clients-nav.php'; ?>
 <br>
 
 <table class="table table-striped" id="dtBasicExample">
@@ -42,7 +45,9 @@
   </tbody> 
 </table>
 <br>
-<a href ="viewdeletedrecords.php" class ="btn btn-warning btn-block">View Past Adventurers</a>
+
+<?php include 'includes/view-all-clients-nav.php'; ?>
+
 <?php
     require_once 'includes/footer.php';
 ?>

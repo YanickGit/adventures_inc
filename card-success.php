@@ -12,8 +12,8 @@
       $address_c = $_POST['address_c'];
       $gender = $_POST['gender'];
       $dob = $_POST['dob'];
-      $email = $_POST['email'];
       $adventures = $_POST['adventures'];
+      $email = $_POST['email'];
       $contact_num = $_POST['contact_num'];
 
       require_once 'includes/upload-image.php';

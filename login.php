@@ -16,7 +16,7 @@
             } else {
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $result['user_id'];
-                header ("Location: view-all-clients.php");
+                header ("Location: view-all-current-clients.php");
             }
         }
         

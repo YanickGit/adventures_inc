@@ -1,6 +1,6 @@
 
     <?php
-        $title = 'Modify REcords';
+        $title = 'Modify Records';
         require_once 'includes/header.php';
         require_once 'includes/auth_check.php';
         require_once 'db/db_connect.php';
@@ -30,21 +30,18 @@
     img, embed{margin-top: 20px;}
     </style>
 
+    <div class = "text-center">
+    <img id="signup-img" src="<?php echo $client_result['imgpath'] ?>" alt="Client Image"> 
+    </div>
+
     <form method="post" action="edit-a-client-action.php" enctype="multipart/form-data" autocomplete="off">
         <input type="hidden" id="client_id" name="client_id" value="<?php echo $client_result['client_id'] ?>" />
         <input type="hidden" id="registered_on" name="registered_on" value="<?php echo $client_result['registered_on'] ?>" />
 
         <div class="row">
-            <div class="col text-center">
-            <img id="signup-img" src="<?php echo $client_result['imgpath'] ?>" alt="Client Image">
-            </div>
-        </div>
-        <br>
-  
-        <div class="row">
             <div class="col">
-            <label for="status">Status</label>
-                <select class="form-control" value="<?php echo $client_result['status_id'] ?>" id="status" name="status" required>
+            <label for="client_status">Status</label>
+                <select class="form-control" value="<?php echo $client_result['status_id'] ?>" id="client_status" name="client_status" required>
                    
                     <?php while($status_row = $status_results->fetch(PDO::FETCH_ASSOC)) { ?>
                         <option value="<?php echo $status_row['status_id'] ?>"
@@ -75,7 +72,7 @@
             <div class="row">
             <div class="col">
             <label for="address">Address</label>
-            <textarea class="form-control" value="<?php echo $client_result['address'] ?>" id="address_c" placeholder="Type Your address" name="address_c" required></textarea>
+            <textarea class="form-control" id="address_c" placeholder="Type Your address" name="address_c" required><?php echo $client_result['address'] ?></textarea>
             </div>
             <div class="col">
             <label for="gender">Gender</label>
@@ -124,7 +121,7 @@
             
             <div class="row">
             <div class="col">
-            <button type="submit" name="submit" class="btn btn-info btn-block">View List</button>
+            <a href ="view-all-current-clients.php" class ="btn btn-info btn-block" >View Client List</a>
             </div>
             <div class="col">
             <button type="submit" name="submit" class="btn btn-success btn-block">Save Changes</button>

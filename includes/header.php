@@ -68,7 +68,7 @@
             <a class="<?php if ($title == 'Login'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="login.php">Login<span class="sr-only">(current)</span></a>
             <?php } else {?>
               <a class="nav-link active" href=#>Hello <?php echo ucfirst($_SESSION['username']); ?>! <span class="sr-only"></span></a>
-              <a class="nav-link active" href="view-all-clients.php">Manage Clients<span class="sr-only">(current)</span></a>
+              <a class="nav-link active" href="view-all-current-clients.php">Manage Clients<span class="sr-only">(current)</span></a>
               <a class="nav-link" href="logout.php">Log out<span class="sr-only">(current)</span></a>
             <?php } ?>    
             
