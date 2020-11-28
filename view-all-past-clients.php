@@ -8,7 +8,8 @@
     $results = $client_crud->getAllPastClients();
 ?>
 
-<h1 class = "text-center">Past Adventurers</h1>
+<br>
+<h2 class = "text-center">Past Adventurers</h2>
 <br>
 
 <?php include 'includes/view-all-clients-nav.php'; ?>
@@ -36,6 +37,7 @@
       <td><?php echo $row['status_name'] ?></td>
       <td>
          <a href ="view-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-primary">View</a>
+         <a onclick="return confirm('NOTICE: You are about to change <?php echo ucfirst($row['firstname'])?> <?php echo ucfirst($row['lastname']) ?> status, are you sure?');" href ="action-make-client-current.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-warning">Make Current</a>
         <a href ="view-delete-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-danger">Delete...</a>
       </td>
     </tr>
@@ -43,8 +45,6 @@
   </tbody> 
 </table>
 <br>
-
-<?php include 'includes/view-all-clients-nav.php'; ?>
 
 <?php
     require_once 'includes/footer.php';

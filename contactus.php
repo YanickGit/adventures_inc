@@ -1,6 +1,7 @@
 <?php
     $title = 'Contact Us';
     require_once 'includes/header.php';
+    require_once 'db/db_connect.php';
 ?>
 
 <br/>
@@ -20,24 +21,24 @@ wecare@adventures.inc</br></p>
         </div>
         <br />
         <div class="col-md-6">
-            <form class="my-form">
+            <form method="post" action="email-send-contact-us.php" class="my-form" autocomplete="off">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="form-name" placeholder="Name">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                     <small id="help" class="form-text text-muted">Type your full name.</small>
                 </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="form-email" placeholder="Email Address">
+                <div class="form-group"> 
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
                     <small id="help" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="form-subject" placeholder="Subject">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                     <small id="help" class="form-text text-muted">Type the subject of your message.</small>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" id="form-message" placeholder="Message"></textarea>
+                    <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
                     <small id="help" class="form-text text-muted">Type your message.</small>
                 </div>
-                <button class="btn btn-secondary" type="submit">Contact Us</button>                
+                <button class="btn btn-secondary" type="submit" name="submit">Contact Us</button>                
             </form>
         </div>
     </div>

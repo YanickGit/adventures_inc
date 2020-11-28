@@ -1,5 +1,5 @@
 <?php
-    $title = 'Restore Client Confirmation';
+    $title = 'Delete Client Confirmation';
     require_once 'includes/header.php';
     require_once 'includes/auth_check.php';
     require_once 'db/db_connect.php';
@@ -14,9 +14,9 @@
  
         echo'
         <br>
-        <h2 class ="text-center">Restore '.ucfirst($result['firstname']).' '.ucfirst($result['lastname']).'\'s Record?</h2>
+        <h2 class ="text-center">'.ucfirst($result['firstname']).' '.ucfirst($result['lastname']).'\'s Details</h2>
         
-        <div class="card text-black bg-warning mb-3 mx-auto" style="width: 960px">
+        <div class="card text-white bg-danger mb-3 mx-auto" style="width: 960px">
         <div class="row no-gutters">
     <div class="col-md-4">
         <img src="'.$result['imgpath'].'." class="card-img" alt="Adventurer Picture">
@@ -83,7 +83,7 @@
     </div>
     <p class="text-center">
         <a href ="view-all-current-clients.php" class ="btn btn-info " >View All Clients</a>
-        <a href ="action-restore-a-client.php?client_id=<?php echo $result['client_id'] ?>&status_name=<?php echo $result['status_name'] ?>" class ="btn btn-warning ">Continue...</a>
+        <a href ="action-restore-a-client.php?client_id=<?php echo $result['client_id'] ?>&status_name=<?php echo $result['status_name'] ?>" class ="btn btn-warning ">Restore...</a>
     </p> 
     </div>
     </div>

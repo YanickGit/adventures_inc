@@ -13,7 +13,7 @@
         <p class="title">CEO & Founder</p>
         <p>"Leadership is a potent combination of strategy and character. But if you must be without one, be without the strategy." <br> – Norman Schwarzkopf</p>
         <p>yan-levy@adventures.inc</p>
-        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
+        <p><a href="contactus.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@
         <p>"Marketing’s job is never done. It’s about perpetual motion. We must continue to innovate every day."
         <br> - Beth Comstock</p>
         <p>debbie-green@adventures.inc</p>
-        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
+        <p><a href="contactus.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@
         <p>"Rich people have small TVs and big libraries, and poor people have small libraries and big TVs."
         <br> – Zig Ziglar</p>
         <p>paul-tong@adventures.inc</p>
-        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
+        <p><a href="contactus.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -55,7 +55,7 @@
         <p>"If we were meant to stay in one place, we’d have roots instead of feet."
         <br> - Rachel Wolchin</p>
         <p>kim-blank@adventures.inc</p>
-        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
+        <p><a href="contactus.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@
         <p>"The best surfer out there is the one having the most fun."
           <br> - Phil Edwards</p>
         <p>carrie-pryce@adventures.inc</p>
-        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
+        <p><a href="contactus.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@
         <p>"Life is like riding a bicycle. To keep your balance you must keep moving"
           <br> - Albert Einstein</p>
         <p>mike-roper@adventures.inc</p>
-        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
+        <p><a href="contactus.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -101,7 +101,7 @@
         <p>"The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails."
         <br> - William Arthur Ward</p>
         <p>mena-bourne@adventures.inc</p>
-        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
+        <p><a href="contactus.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>
@@ -115,7 +115,7 @@
         <p>"We don’t stop hiking because we grow old, We grow old because we stop hiking."
           <br> - Finis Mitchel</p>
         <p>zeal-mount@adventures.inc</p>
-        <p><a href="contact-us.php" class="btn btn-primary">Contact Us</a></p>
+        <p><a href="contactus.php" class="btn btn-primary">Contact Us</a></p>
       </div>
     </div>
   </div>

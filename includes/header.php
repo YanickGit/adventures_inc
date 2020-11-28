@@ -58,7 +58,7 @@
           <a class="<?php if ($title == 'The Adventures'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="the-adventures.php">The Adventures</a>
           <a class="<?php if ($title == 'Join The Adventure'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="sign-up.php">Join The Adventure</a>
           <a class="<?php if ($title == 'The Team'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="the-team.php">The Team</a>
-          <a class="<?php if ($title == 'Contact Us'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="contact-us.php">Contact Us</a>
+          <a class="<?php if ($title == 'Contact Us'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="contactus.php">Contact Us</a>
           
         </div>
         <div class="navbar-nav ml-auto">
@@ -68,7 +68,17 @@
             <a class="<?php if ($title == 'Login'){echo 'nav-link active';} else {echo 'nav-link';}?>" href="login.php">Login<span class="sr-only">(current)</span></a>
             <?php } else {?>
               <a class="nav-link active" href=#>Hello <?php echo ucfirst($_SESSION['username']); ?>! <span class="sr-only"></span></a>
-              <a class="nav-link active" href="view-all-current-clients.php">Manage Clients<span class="sr-only">(current)</span></a>
+
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle nav-link active" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Manage
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="view-all-current-clients.php">Adventurers</a>
+                      <a class="dropdown-item" href="view-all-contactus-submissions.php">Contact Us</a>
+                    </div>
+              </div>
+              <span class="sr-only">(current)</span></a>
               <a class="nav-link" href="logout.php">Log out<span class="sr-only">(current)</span></a>
             <?php } ?>    
             

@@ -9,6 +9,8 @@
             $this->db = $db_connect;
         }
 
+//===============================================================================================================
+    //Inserting of Records (functions)
 
     public function insertUser($username, $password){
         try {
@@ -40,6 +42,34 @@
             }
         }
 
+        public function insertContactUs ($name, $email, $subject, $message){
+            try {
+                //define sql statement to be executed 
+                $sql = "INSERT INTO `contactus_tbl` (`name`, `email`, `subject`, `message`) 
+                VALUES (:name, :email, :subject, :message)";
+                
+                //prepare the sql statement for execution
+                $statement = $this->db->prepare($sql);
+                
+                //bind all placeholders to the actual values
+                $statement->bindparam(':name',$name);
+                $statement->bindparam(':email',$email);
+                $statement->bindparam(':subject',$subject);
+                $statement->bindparam(':message',$message);
+
+                //execute statement
+                $statement->execute();
+                return true;
+
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
+
+//===============================================================================================================
+    //Retrieval of Records (functions)
+
     public function getUser($username, $password){
         try {
             $sql = "SELECT * FROM `users_tbl` 
@@ -53,6 +83,19 @@
             //$result =$this->db->query($sql);
             $result = $statement->fetch();
             return $result;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
+
+        public function getAllContactUs (){
+            try {
+                $sql = "SELECT * FROM `contactus_tbl`";
+
+                $results =$this->db->query($sql);
+                return $results;
+                
             } catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
@@ -80,8 +123,6 @@
 
     public function getUserbyUsername ($username){
         try {
-            //$sql = "SELECT COUNT (*) AS userCount FROM `users_tbl` 
-            //WHERE `username` = :username";
             $sql = "SELECT COUNT(username) AS userCount FROM users_tbl WHERE `username` = :username";
 
             $statement = $this->db->prepare($sql);
@@ -94,6 +135,27 @@
                 return false;
             }
          }
+
+//===============================================================================================================
+    //Deletion of Records (functions)
+
+         public function deleteEntryContactUs($contact_id){
+            try {
+                $sql = "DELETE FROM `contactus_tbl` 
+                WHERE $contact_id = :contact_id";
+
+                $statement = $this->db->prepare($sql);
+                $statement->bindparam(':contact_id', $contact_id);        
+                $statement->execute();
+                return true;    
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
+
+//===============================================================================================================
+    //Updating of Records (functions)
 
          public function forgetPassword($username, $password){
             try {

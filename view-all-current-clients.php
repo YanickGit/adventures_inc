@@ -8,7 +8,8 @@
     $results = $client_crud->getAllCurrentClients();
 ?>
 
-<h1 class = "text-center">Current Adventurers</h1>
+<br>
+<h2 class = "text-center">Current Adventurers</h2>
 <br>
 
 <?php include 'includes/view-all-clients-nav.php'; ?>
@@ -35,9 +36,9 @@
       <td><?php echo $row['adventures_name'] ?></td>
       <td><?php echo $row['status_name'] ?></td>
       <td>
-        <a href ="email-resend-registration.php?email=<?php echo $row['email']?>&firstname=<?php echo $row['firstname']?>&lastname=<?php echo $row['lastname']?>" class ="btn btn-info">Email</a>
+        <a onclick="return confirm('NOTICE: You are about to resent a registration email to <?php echo ucfirst($row['firstname'])?> <?php echo ucfirst($row['lastname']) ?>, are you sure?');" href ="email-resend-registration.php?email=<?php echo $row['email']?>&firstname=<?php echo $row['firstname']?>&lastname=<?php echo $row['lastname']?>" class ="btn btn-info">Email</a>
         <a href ="view-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-primary">View</a>
-        <a href ="edit-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-warning">Edit</a>
+        <a href ="edit-a-current-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-warning">Edit</a>
         <a href ="view-delete-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-danger">Delete</a>
       </td>
     </tr>
@@ -45,8 +46,6 @@
   </tbody> 
 </table>
 <br>
-
-<?php include 'includes/view-all-clients-nav.php'; ?>
 
 <?php
     require_once 'includes/footer.php';

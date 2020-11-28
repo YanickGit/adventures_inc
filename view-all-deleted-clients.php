@@ -8,7 +8,8 @@
     $results = $client_crud->getAllDeletedClients();
 ?>
 
-<h1 class = "text-center">Deleted Adventurers</h1>
+<br>
+<h2 class = "text-center">Deleted Adventurers</h2>
 <br>
 
 <?php include 'includes/view-all-clients-nav.php'; ?>
@@ -35,15 +36,14 @@
       <td><?php echo $row['adventures_name'] ?></td>
       <td><?php echo $row['status_name'] ?></td>
       <td>
-        <a href ="view-restore-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-info">Restore</a>
+        <a href ="view-deleted-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-primary">View</a>
+        <a href ="view-restore-a-client.php?client_id=<?php echo $row['client_id']?>" class ="btn btn-info">Restore...</a>
       </td>
     </tr>
     <?php } ?>
   </tbody> 
 </table>
 <br>
-
-<?php include 'includes/view-all-clients-nav.php'; ?>
 
 <?php
     require_once 'includes/footer.php';

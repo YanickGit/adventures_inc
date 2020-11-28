@@ -9,6 +9,7 @@ if (!$_GET['client_id']){
 }else {
     //Get ID Values
     $client_id = $_GET['client_id'];
+    $client_status = $_GET['status_name'];
 
     //Call Restore Function
     $restore_result = $client_crud->restoreDeletedClients($client_id);
@@ -16,8 +17,12 @@ if (!$_GET['client_id']){
     //Redirect to ViewRecords
     if ($restore_result){
         ////////Check Status FK
-
-            header("Location: view-all-deleted-clients.php");
+        if($client_status == "REGISTERED"){
+            header("Location: view-all-current-clients.php");
+        }else {
+            header("Location: view-all-past-clients.php");
+        }
+            
         
     } else{
         require_once 'includes/error_message.php';
