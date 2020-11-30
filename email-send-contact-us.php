@@ -16,8 +16,8 @@
     if ($isSuccess) {
         //$email_system = "yanickbiz2k4@hotmail.com";
 
-        //require_once 'action-send-email.php';
-        //require_once 'email-contactus-client.php';
+        require_once 'action-send-email.php';
+        require_once 'email-contactus-client.php';
         //require_once 'email-contactus-system.php';
 
     } else {
@@ -26,6 +26,7 @@
     } else {
         //header("Location: contact-us-confirmation.php");
 }
+echo"<?php ?>";
 ?>
 
 <?php

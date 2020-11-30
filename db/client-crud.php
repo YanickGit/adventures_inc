@@ -210,6 +210,26 @@
 //===============================================================================================================
              // (functions)
 
+        public function makeCurrenClients($client_id){
+            try {
+                $sql = "UPDATE `clients_tbl` 
+                SET `client_status_fk`= $this->currentClientsFK
+                WHERE client_id = :client_id";
+
+                //bind all placeholders to the actual values
+                    
+                    $statement = $this->db->prepare($sql);
+                    $statement->bindparam(':client_id',$client_id);              
+                        
+                $statement->execute();
+                return true;
+
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
+
         public function getClientbyEmail ($email){
             try {
                 $sql = "SELECT COUNT(email) AS emailCount FROM clients_tbl WHERE `email` = :email";
