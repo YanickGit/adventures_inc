@@ -3,7 +3,7 @@
     require_once 'includes/header.php';
     require_once 'db/db_connect.php';
     
-    //require_once 'send-email.php';
+    require_once 'action-send-email.php';
 
     if(isset($_POST['submit'])){
       //extract values from the $_POST array
@@ -33,7 +33,7 @@
        $gender_results = $client_crud->getGender();
 
       if ($isSuccess) {
-        //require_once 'email-registration.php';
+        require_once 'email-registration.php';
 
         echo'
         <br>

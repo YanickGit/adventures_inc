@@ -15,7 +15,7 @@ if (!$_GET['contact_id']){
 
     //Redirect to ViewRecords
     if ($delete_result){
-        header("Location: #.php");
+        header("Location:");
     } else{
         require_once 'includes/error_message.php';
     }

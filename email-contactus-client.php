@@ -17,13 +17,13 @@
 
     <style>
       body {
-      background-color: #6dcfcf
+        background-color: #6dcfcf
       }
     </style>
 
 </head>
-<body>
-  <div class="container">   
+<body background-color: #6dcfcf>
+  <div class="container" style="display: none; font-size: 1px; color: #fefefe;>   
   <br>
 
   <div class="card  mx-auto" style="width: 40rem;">
@@ -41,10 +41,20 @@
           '.$message.'
     </p>
     <br>
-      <a href="https://www.iso.org/member/1663.html" class="btn btn-primary">Visit Us</a>
+      <a href="https://ylevy-adventures-2020-11-17.herokuapp.com/" class="btn btn-primary">Visit Us</a>
     </div>
   </div>
 </div>
+
+<!--============================================================================================================-->
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	
+<!--============================================================================================================-->
 
 </body>
 </html>

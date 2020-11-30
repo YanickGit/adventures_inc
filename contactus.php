@@ -21,7 +21,7 @@ wecare@adventures.inc</br></p>
         </div>
         <br />
         <div class="col-md-6">
-            <form method="post" action="email-send-contact-us.php" class="my-form" autocomplete="off">
+            <form method="post" action="email-send-contactus.php" class="my-form" autocomplete="off">
                 <div class="form-group">
                     <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                     <small id="help" class="form-text text-muted">Type your full name.</small>

@@ -14,11 +14,11 @@
     $isSuccess = $user_crud->insertContactUs (trim(strtolower($name)), trim(strtolower($email)), trim(strtolower($subject)), trim(strtolower($message)));
 
     if ($isSuccess) {
-        //$email_system = "yanickbiz2k4@hotmail.com";
+        $email_system = "yanickbiz2k4@hotmail.com";
 
         require_once 'action-send-email.php';
         require_once 'email-contactus-client.php';
-        //require_once 'email-contactus-system.php';
+        require_once 'email-contactus-system.php';
 
     } else {
         include 'includes/error_message.php';
