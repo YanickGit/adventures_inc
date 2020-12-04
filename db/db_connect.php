@@ -13,12 +13,12 @@
     $_password = 'yl_root_db.92';
     $_charset = 'utf8mb4';
 
-    $dsn = "mysql:host=$host; dbname=$db; charset=$charset";
-    //$_dsn = "mysql:host=$_host; dbname=$_db; charset=$_charset";
+    //$dsn = "mysql:host=$host; dbname=$db; charset=$charset";
+    $_dsn = "mysql:host=$_host; dbname=$_db; charset=$_charset";
 
     try {
-        $pdo = new PDO($dsn, $username, $password);
-        //$pdo = new PDO($_dsn, $_username, $_password);
+        //$pdo = new PDO($dsn, $username, $password);
+        $pdo = new PDO($_dsn, $_username, $_password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } 
     catch (PDOException $e) {
