@@ -7,7 +7,7 @@
     $charset = 'utf8mb4';
 
     //remote_db 
-    $_host = 'db4free.net';
+    $_host = 'db4free.net:3306';
     $_db = 'yl_adventures_db';
     $_username = 'yl_root_db2';
     $_password = 'yl_root_db.92';
