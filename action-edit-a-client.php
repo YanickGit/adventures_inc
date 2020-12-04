@@ -23,7 +23,12 @@
 
         //Redirect to ViewRecords
         if ($result){
-            header("Location: view-all-current-clients.php");
+            //header("Location: view-all-current-clients.php");
+?>
+            <script>
+            location.replace("view-all-current-clients.php")
+            </script>
+<?php
     }
     else { 
         include 'includes/error_message.php';

@@ -15,9 +15,12 @@ if (!$_GET['contact_id']){
 
     //Redirect to ViewRecords
     if ($delete_result){
-        header("Location: view-all-contactus-submissions.php");
-        exit ();
-        //include 'view-all-contactus-submissions2.php';
+        //header("Location: view-all-contactus-submissions.php");
+?>
+        <script>
+        location.replace("view-all-contactus-submissions.php")
+        </script>
+<?php
     } else{
         include 'includes/error_message.php';
     }

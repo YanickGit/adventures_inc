@@ -127,7 +127,12 @@
       }
     }
     else {
-      header("Location: index.php");
+      //header("Location: index.php");
+?>
+      <script>
+      location.replace("index.php")
+      </script>
+<?php
     }
   ?>
 

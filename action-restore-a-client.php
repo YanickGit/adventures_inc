@@ -18,12 +18,20 @@ if (!$_GET['client_id']){
     if ($restore_result){
         ////////Check Status FK
         if($client_status == "REGISTERED"){
-            header("Location: view-all-current-clients.php");
+            //header("Location: view-all-current-clients.php");
+?>
+            <script>
+            location.replace("view-all-current-clients.php")
+            </script>
+<?php   
         }else {
-            header("Location: view-all-past-clients.php");
-        }
-            
-        
+            //header("Location: view-all-past-clients.php");
+?>
+            <script>
+            location.replace("view-all-past-clients.php")
+            </script>
+<?php
+        }    
     } else{
         require_once 'includes/error_message.php';
     }

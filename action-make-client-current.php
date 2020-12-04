@@ -15,7 +15,12 @@ if (!$_GET['client_id']){
 
     //Redirect to ViewRecords
     if ($makecurrent_result){
-        header("Location: view-all-current-clients.php");
+        //header("Location: view-all-current-clients.php");
+?>
+        <script>
+        location.replace("view-all-current-clients.php")
+        </script>
+<?php
     } else{
         require_once 'includes/error_message.php';
     }
