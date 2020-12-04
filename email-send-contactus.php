@@ -19,12 +19,13 @@
         require_once 'action-send-email.php';
         require_once 'email-contactus-client.php';
         require_once 'email-contactus-system.php';
+        include 'includes/success_message.php';
 
     } else {
         include 'includes/error_message.php';
     }
     } else {
-        //header("Location: contact-us-confirmation.php");
+        include 'includes/error_message.php';   
 }
 echo"<?php ?>";
 ?>

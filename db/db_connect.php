@@ -9,11 +9,11 @@
     //remote_db 
     $_host = 'db4free.net';
     $_db = 'yl_adventures_db';
-    $_username = 'yl_root_db';
-    $_password = 'yl_root_db.9';
+    $_username = 'yl_root_db2';
+    $_password = 'yl_root_db.92';
     $_charset = 'utf8mb4';
 
-    $dsn = "mysql:host=$host; dbname=$db; charset=$charset";
+    //$dsn = "mysql:host=$host; dbname=$db; charset=$charset";
     $_dsn = "mysql:host=$_host; dbname=$_db; charset=$_charset";
 
     try {
