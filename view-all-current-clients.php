@@ -15,7 +15,8 @@
 <?php include 'includes/view-all-clients-nav.php'; ?>
 <br>
 
-<table class="table table-striped table-responsive" id="dtBasicExample">
+<div class="table-responsive" style="width:100%">
+<table class="table table-striped" id="dtBasicExample">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -45,6 +46,7 @@
     <?php } ?>
   </tbody> 
 </table>
+</div>
 <br>
 
 <?php

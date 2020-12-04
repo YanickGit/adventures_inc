@@ -55,7 +55,7 @@
         echo'
         '.ucfirst($firstname).' '.ucfirst($lastname).'\'s Registration Details</h3>
         
-        <div class="card text-white bg-dark mb-3 mx-auto" style="width: 960px">
+        <div class="card text-white bg-dark mb-3 mx-auto" style="width:100%">
         <div class="row no-gutters">
     <div class="col-md-4">
         <img src="'.$imgpath.'" class="card-img" alt="Adventurer Picture">

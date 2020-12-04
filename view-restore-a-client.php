@@ -16,10 +16,10 @@
         <br>
         <h2 class ="text-center">Restore '.ucfirst($result['firstname']).' '.ucfirst($result['lastname']).'\'s Record?</h2>
         
-        <div class="card text-black bg-warning mb-3 mx-auto" style="width: 960px">
+        <div class="card text-black bg-warning mb-3 mx-auto" style="width:100%">
         <div class="row no-gutters">
     <div class="col-md-4">
-        <img src="'.$result['imgpath'].'." class="card-img" alt="Adventurer Picture">
+        <img src="'.$result['imgpath'].'." class="card-img img-responsive" alt="Adventurer Picture">
     </div>
 
     <div class="col-md-4">
