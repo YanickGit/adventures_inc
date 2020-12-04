@@ -120,8 +120,9 @@
    
           </div>
       </div>
+      <a href ="index.php ?>" class ="btn btn-primary">Continue...</a>
         </div>
-        <a href ="index.php ?>" class ="btn btn-primary">Continue...</a>
+        
     <?php
       } else {
         include 'includes/error_message_email.php';
