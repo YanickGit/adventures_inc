@@ -18,7 +18,7 @@ if (!$_GET['client_id']){
         //header("Location: view-all-deleted-clients.php");
         ?>
         <script>
-        location.replace("https://www.w3schools.com")
+        location.replace("view-all-deleted-clients.php")
         </script>
         <?php
     } else{
