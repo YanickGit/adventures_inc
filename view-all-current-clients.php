@@ -15,7 +15,7 @@
 <?php include 'includes/view-all-clients-nav.php'; ?>
 <br>
 
-<table class="table table-striped" id="dtBasicExample">
+<table class="table table-striped table-responsive" id="dtBasicExample">
   <thead>
     <tr>
       <th scope="col">#</th>
