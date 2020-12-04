@@ -1,7 +1,7 @@
 <?php
     $title = 'Contact Us';
     require_once 'includes/header.php';
-    require_once 'db/db_connect.php';
+    //require_once 'db/db_connect.php';
 ?>
 
 <br/>
