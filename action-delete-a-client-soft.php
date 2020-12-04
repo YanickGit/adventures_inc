@@ -16,7 +16,7 @@ if (!$_GET['client_id']){
     //Redirect to ViewRecords
     if ($delete_result){
         //header("Location: view-all-deleted-clients.php");
-        echo"<a href='ur view-all-deleted-clients.php'></a>";
+        echo"<a href='view-all-deleted-clients.php'></a>";
     } else{
         require_once 'includes/error_message.php';
     }
