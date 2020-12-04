@@ -10,7 +10,7 @@ if(isset($_POST['submit']) && !empty($_FILES['image']['name'])){
     $new_file_name = $firstname.$lastname.'-'.$md5_file_name.'.'.$file_ext;
 
     //Image Path
-    $imgpath = "images/profile/".$new_file_name;
+    $imgpath = "../images/profile/".$new_file_name;
 
     //Check File Size
     if($file_size > 2097152){
