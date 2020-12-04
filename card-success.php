@@ -123,7 +123,7 @@
         </div>
     <?php
       } else {
-        include 'includes/error_message.php';
+        include 'includes/error_message_email.php';
       }
     }
     else {
