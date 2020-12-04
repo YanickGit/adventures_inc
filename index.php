@@ -7,6 +7,8 @@
 <h2 class="text-center">Adventures Inc</h2>
 <p class="text-center">Join The Adventure</p>
 
+
+
 <?php
     require_once 'includes/slider.php';
 ?>

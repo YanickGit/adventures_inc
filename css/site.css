@@ -1,74 +1,3 @@
-/*Picture Slider*/
-*{
-	margin:0;
-	padding:0;
-}
-
-#slider{
-	width: 100%;
-	max-width: 960px;
-	height: 480px;
-	margin-left: auto;
-	margin-right: auto;
-	border: 5px solid rgb(140, 191, 250);
-}
-
-#slider .prevButton{
-	height:72px;
-	width:68px;
-	position:absolute;
-	background:url('#') no-repeat;
-	top:50%;
-	margin-top:-36px;
-	cursor:pointer;
-	z-index:2000;
-	background-position:lft top;
-	left:0
-}
-
-#slider .prevButton:hover{ background-position:left bottom;left:0;}
-
-#slider .nextButton{
-	height:72px;
-	width:68px;
-	position:absolute;
-	background:url('#') no-repeat;
-	top:50%;
-	margin-top:-36px;
-	cursor:pointer;
-	z-index:2000;
-	background-position:right top;
-	right:0
-}
-
-#slider .nextButton:hover{background-position:right bottom;right:0;}
-
-#slider ul{
-	width: 100%;
-	max-width: 950px;
-	height: auto;
-	max-height: 470px;
-	list-style:none outside none;
-	
-	overflow:hidden;
-}
-
-#slider li:first-child{
-	display:list-item;
-	
-}
-
-#slider li{
-	
-	display:none;
-}
-
-#slider-img {
-	width: 100%;
-	max-width: 950px;
-	height: auto;
-	max-height: 470px;
-  }
 
 /*==========================================*/ 
 
@@ -144,13 +73,44 @@ html {
 
   #adventure-img {
 	float: left;
-	border: 5px;
+	border: 2px;
 	border-radius: 15%;
 	padding: 5px;
 	width: 100%;
 	max-width: 250px;
 	height: auto;
 	max-height: 188px;
+	
+  }
+
+  /*==========================================*/ 
+
+/*About Us*/
+
+#aboutus-img {
+	float: left;
+	border: 2px ;
+	border-radius: 15%;
+	padding: 5px;
+	width: 100%;
+	max-width: 200px;
+	height: auto;
+	max-height: 200px;
+	
+  }
+
+  /*==========================================*/ 
+
+  /*COntact Us*/
+
+#contactus-img {
+	border: 2px solid #021a40;
+	border-radius: 10%;
+	padding: 2px;
+	width: 100%;
+	max-width: 350px;
+	height: auto;
+	max-height: 220px;
 	
   }
 

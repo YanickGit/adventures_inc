@@ -81,13 +81,6 @@
               <span class="sr-only">(current)</span></a>
               <a class="nav-link" href="logout.php">Log out<span class="sr-only">(current)</span></a>
             <?php } ?>    
-            
-            <script>
-$(document).ready(function () {
-  $('#dtBasicExample').DataTable();
-  $('.dataTables_length').addClass('bs-select');
-});
-</script>
 
         </div>
       </div>
