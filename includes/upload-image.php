@@ -7,7 +7,7 @@ if(isset($_POST['submit']) && !empty($_FILES['image']['name'])){
     
     //Create Hashed File Name
     $md5_file_name = md5($file_name);
-    $new_file_name = $firstname.$lastname.'-'.$md5_file_name.'.'.$file_ext;
+    $new_file_name = strtolower($firstname).strtolower($lastname).'-'.$md5_file_name.'.'.$file_ext;
 
     //Image Path
     $imgpath = "../images/profile/".$new_file_name;
