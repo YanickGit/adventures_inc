@@ -84,7 +84,7 @@
     <p class="text-center">
         <a href ="view-all-current-clients.php" class ="btn btn-info " >View All Clients</a>
         <a href ="action-restore-a-client.php?client_id=<?php echo $result['client_id'] ?>&status_name=<?php echo $result['status_name'] ?>" class ="btn btn-warning ">Restore...</a>
-        <a onclick="return confirm('NOTICE: You are about to PERMANENTLY DELETE <?php echo strtoupper($result['firstname'])?> <?php echo strtoupper($result['lastname']) ?> RECORD, are you sure?');" href ="action-purge-a-client.php?client_id=<?php echo $result['client_id'] ?>" class ="btn btn-dark">Purge...</a>
+        <a onclick="return confirm('NOTICE: You are about to PERMANENTLY DELETE <?php echo strtoupper($result['firstname'])?> <?php echo strtoupper($result['lastname']) ?> RECORD, are you sure?');" href ="action-delete-a-client-hard.php?client_id=<?php echo $result['client_id'] ?>" class ="btn btn-dark">Purge...</a>
     </p> 
     </div>
     </div>

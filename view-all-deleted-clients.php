@@ -38,7 +38,7 @@
       <td>
         <a href ="view-deleted-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-primary">View</a>
         <a href ="view-restore-a-client.php?client_id=<?php echo $row['client_id']?>" class ="btn btn-info">Restore...</a>
-        <a onclick="return confirm('NOTICE: You are about to PERMANENTLY DELETE <?php echo strtoupper($row['firstname'])?> <?php echo strtoupper($row['lastname']) ?> RECORD, are you sure?');" href ="action-purge-a-client.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-dark">Purge...</a>
+        <a onclick="return confirm('NOTICE: You are about to PERMANENTLY DELETE <?php echo strtoupper($row['firstname'])?> <?php echo strtoupper($row['lastname']) ?> RECORD, are you sure?');" href ="action-delete-a-client-hard.php?client_id=<?php echo $row['client_id'] ?>" class ="btn btn-dark">Purge...</a>
       </td>
     </tr>
     <?php } ?>

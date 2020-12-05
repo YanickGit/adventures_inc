@@ -11,7 +11,7 @@ if (!$_GET['client_id']){
     $client_id = $_GET['client_id'];
 
     //Call Delete Function
-    $delete_result = $client_crud->deleteSoftClients($client_id);
+    $delete_result = $client_crud->deleteHardClients($client_id);
 
     //Redirect to ViewRecords
     if ($delete_result){

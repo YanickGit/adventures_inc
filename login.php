@@ -38,6 +38,8 @@
             <label for="password">Password*</label>
             <input type="password" class="form-control" id="password" name="password" required>
             <?php if (empty($password) && isset($password_error)) echo "<p class='text-danger'>$password_error</p>";?>
+            <!-- An element to toggle between password visibility -->
+            <small id="showpassword" class="form-text text-muted"><input type="checkbox" onclick="showPassword()"> SHOW PASSWORD</small>
         </div>
        
         <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>

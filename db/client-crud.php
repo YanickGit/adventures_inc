@@ -207,6 +207,21 @@
             }
         }
 
+        public function deleteHardClients($client_id){
+            try {
+                $sql = "DELETE FROM `clients_tbl` 
+                WHERE client_id = :client_id";
+
+                $statement = $this->db->prepare($sql);
+                $statement->bindparam(':client_id', $client_id);        
+                $statement->execute();
+                return true;    
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
+
 //===============================================================================================================
              // (functions)
 
