@@ -19,7 +19,7 @@
       require_once 'includes/upload-image.php';
 
       if (empty($imgpath)) {
-       $imgpath = "images/profile/__defaultCrop.jpg";
+       $imgpath = "images/profile/__defaultcrop.jpg";
      } 
 
       //call function to insert and track if success or not
