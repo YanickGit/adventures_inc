@@ -16,7 +16,8 @@ We now serve customers all over the world, and we are thrilled to be a part of t
 We hope you enjoy our adventures as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to <a href="contactus.php">contact us</a>.<br><br>
 
 Sincerely,<br>
-Yan Levy, Founder & CEO
+Yan Levy<br>
+Founder & CEO
 </p>
 
 <?php
