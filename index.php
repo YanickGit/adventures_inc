@@ -20,7 +20,7 @@ Surf in Boston Bay, <br>
 Cycle to Portland, and <br>
 Sail to Montego Bay<br><br>
 
-Register and take part in one of our adventures, our trained and courteous team awaits your arrival.<br> Special Rates for Jamaicans.</h5>
+<a href="signup.php">Register</a> and take part in one of our adventures, our trained and courteous team awaits your arrival.<br><br><b>SPECIAL RATES FOR JAMAICANS</b></h5>
 
 <?php
     require_once 'includes/footer.php';
