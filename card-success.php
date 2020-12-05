@@ -120,7 +120,7 @@
    
           </div>
       </div>
-      <a href ="index.php ?>" class ="btn btn-primary">Continue...</a>
+      <a href ="index.php" class ="btn btn-primary">Continue...</a>
         </div>
         
     <?php
