@@ -14,7 +14,7 @@
 
 <br>
 
-<table class="table table-striped" id="dtBasicExample">
+<table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>

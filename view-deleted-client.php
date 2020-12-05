@@ -19,7 +19,7 @@
         <div class="card text-white bg-danger mb-3 mx-auto" style="width:100%">
         <div class="row no-gutters">
     <div class="col-md-4">
-        <img src="'.$result['imgpath'].'." class="card-img" alt="Adventurer Picture">
+        <img src="'.$result['imgpath'].'" class="card-img" alt="Adventurer Picture">
     </div>
 
     <div class="col-md-4">
