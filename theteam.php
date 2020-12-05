@@ -84,7 +84,7 @@
       <div class="theTeam">
         <h2>Mike Roper</h2>
         <p class="title">Team Lead: Cycling</p>
-        <p>"Life is like riding a bicycle. To keep your balance you must keep moving"
+        <p>"Life is like riding a bicycle. To keep your balance you must keep moving."
           <br> - Albert Einstein</p>
         <p>mike-roper@adventures.inc</p>
         <p><a href="contactus.php" class="btn btn-primary">Contact Us</a></p>

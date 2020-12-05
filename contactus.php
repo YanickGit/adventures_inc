@@ -20,9 +20,9 @@ Jamaica, West Indies,</br>
 876.999.1000-10,</br>
 wecare@adventures.inc</br></p>
 <img id ="contactus-img" src="images/site/logo.png" alt="logo">
-
+<br /><br />
         </div>
-        <br />
+        <br /><br />
         <div class="col-md-6">
             <form method="post" action="email-send-contactus.php" class="my-form" autocomplete="off">
                 <div class="form-group">
