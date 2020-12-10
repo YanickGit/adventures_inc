@@ -6,7 +6,7 @@
 
 <br/>
 <h2><?php echo $title;?></h2>
-<p>Have a question or suggestions?</br></p>
+<p>Have a question or suggestion?</br></p>
 
 
 
